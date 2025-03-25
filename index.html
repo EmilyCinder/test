@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emily Cinder Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+  <style>
+    /* Toggle Switch Styling */
+    .theme-switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    .theme-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #9b5de5;
+      transition: .4s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: #f0f0f0;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #555;
+    }
+
+    input:checked + .slider:before {
+      background-color: #9b5de5;
+      transform: translateX(26px);
+    }
+
+    body {
+      background-color: #f0f0f0;
+      color: #222;
+      transition: background-color 0.5s, color 0.5s;
+      font-family: 'Inconsolata', monospace;
+    }
+
+    body.night-mode {
+      background-color: #000;
+      color: #f0f0f0;
+    }
+
+    section, header, footer {
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    body.night-mode section,
+    body.night-mode header,
+    body.night-mode footer {
+      background-color: #111;
+      color: #f0f0f0;
+    }
+  </style>
+</head>
+
+<style>
+  .purple-stroke {
+    color: #9b5de5;                     /* Dark Purple Core */
+    text-shadow: 
+      -1px -1px 0 #b388eb,   /* Light Purple Stroke */
+      1px -1px 0 #b388eb,
+      -1px 1px 0 #b388eb,
+      1px 1px 0 #b388eb;
+  }
+</style>
+
+<header class="flex justify-between items-center p-4 md:p-6 shadow-lg bg-white dark:bg-[#1a1a1a]">
+  <!-- Theme Toggle -->
+  <div class="theme-switch-wrapper">
+    <label class="theme-switch">
+      <input type="checkbox" id="mode-toggle">
+      <div class="slider round"></div>
+    </label>
+  </div>
+
+  <!-- Hamburger Button (Mobile Only - Always Purple) -->
+  <button id="menu-btn" class="md:hidden focus:outline-none">
+    <svg class="w-8 h-8 text-[#9b5de5]" fill="none" stroke="#9b5de5" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </button>
+
+  <!-- Desktop Nav - Bold Purple Links -->
+  <nav id="desktop-menu" class="hidden md:flex flex-row space-x-6 text-base md:text-lg font-semibold">
+    <a href="#about" class="text-[#9b5de5]">About</a>
+    <a href="#projects" class="text-[#9b5de5]">Projects</a>
+    <a href="#vst-uiux" class="text-[#9b5de5]">VST UI/UX</a>
+    <a href="#web-dev" class="text-[#9b5de5]">Web Dev</a>
+    <a href="#graphic-design" class="text-[#9b5de5]">Graphic</a>
+    <a href="#visual-programming" class="text-[#9b5de5]">Visual</a>
+    <a href="#journalism" class="text-[#9b5de5]">Journalism</a>
+    <a href="#contact" class="text-[#9b5de5]">Contact</a>
+  </nav>
+</header>
+
+<!-- Mobile Menu - Bold Purple Links -->
+<div id="mobile-menu" class="hidden flex flex-col items-center space-y-6 p-6 bg-white dark:bg-[#1a1a1a] text-base md:text-lg font-semibold w-full">
+  <a href="#about" class="text-[#9b5de5]">About</a>
+  <a href="#projects" class="text-[#9b5de5]">Projects</a>
+  <a href="#vst-uiux" class="text-[#9b5de5]">VST UI/UX</a>
+  <a href="#web-dev" class="text-[#9b5de5]">Web Dev</a>
+  <a href="#graphic-design" class="text-[#9b5de5]">Graphic</a>
+  <a href="#visual-programming" class="text-[#9b5de5]">Visual</a>
+  <a href="#journalism" class="text-[#9b5de5]">Journalism</a>
+  <a href="#contact" class="text-[#9b5de5]">Contact</a>
+</div>
+
+
+<!-- Mobile Menu - Slightly Larger, Purple Stroke -->
+<div id="mobile-menu" class="hidden flex flex-col items-center space-y-6 p-6 bg-white dark:bg-[#1a1a1a] text-base md:text-lg md:hidden shadow-lg w-full">
+  <a href="#about" class="purple-stroke">About</a>
+  <a href="#projects" class="purple-stroke">Projects</a>
+  <a href="#vst-uiux" class="purple-stroke">VST UI/UX</a>
+  <a href="#web-dev" class="purple-stroke">Web Dev</a>
+  <a href="#graphic-design" class="purple-stroke">Graphic</a>
+  <a href="#visual-programming" class="purple-stroke">Visual</a>
+  <a href="#journalism" class="purple-stroke">Journalism</a>
+  <a href="#contact" class="purple-stroke">Contact</a>
+</div>
+
+<!-- JS for Menu Toggle and Dark Mode -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const modeToggle = document.getElementById('mode-toggle');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  modeToggle.addEventListener('change', () => {
+    document.documentElement.classList.toggle('dark');
+  });
+</script>
+
+
+
+
+ <!-- Hero Section -->
+<section class="relative w-full h-[80vh] md:h-screen overflow-hidden">
+  <!-- Video Background -->
+  <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+    <source src="./videos/compressed/compressed/compressed/realhero.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay (Optional) -->
+  <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20"></div>
+
+  <!-- Hero Content -->
+  <div class="relative z-10 flex flex-col items-center justify-center text-center h-full px-6">
+    <h1 class="text-5xl md:text-7xl font-bold text-[#f0f0f0]">Creative Technologist & Designer</h1>
+    <p class="mt-6 text-xl md:text-2xl max-w-2xl text-[#f0f0f0]">Fusing design, code, and storytelling to create unique digital experiences.</p>
+  </div>
+</section>
+
+
+  <!-- About -->
+  <section id="about" class="py-16 px-6 md:px-12">
+    <h2 class="text-4xl font-bold text-[#9b5de5] mb-8">About Me</h2>
+    <p class="text-lg max-w-3xl">I'm Emily, a creative technologist passionate about design, sound, and interactive media. Skilled in HTML, CSS, JavaScript, Tailwind CSS, Three.js, TouchDesigner, Ableton, and creative coding. My goal is to blend technology with storytelling to make immersive experiences.</p>
+  </section>
+
+  <!-- Recent Works -->
+  <section id="projects" class="py-16 px-6 md:px-12">
+    <h2 class="text-4xl font-bold text-[#9b5de5] mb-8">Recent Works</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-[#ddd] dark:bg-[#222] p-6 rounded-lg">
+        <h3 class="text-2xl font-semibold mb-4">Interactive A/V Piece</h3>
+        <p class="mb-4">Audiovisual project using TouchDesigner & Ableton.</p>
+        <a href="#" class="text-[#9b5de5] hover:underline">View Demo</a>
+      </div>
+      <div class="bg-[#ddd] dark:bg-[#222] p-6 rounded-lg">
+        <h3 class="text-2xl font-semibold mb-4">Encoded Design Tags</h3>
+        <p class="mb-4">Scannable graphics for fashion-tech industry.</p>
+        <a href="#" class="text-[#9b5de5] hover:underline">View Case Study</a>
+      </div>
+      <div class="bg-[#ddd] dark:bg-[#222] p-6 rounded-lg">
+        <h3 class="text-2xl font-semibold mb-4">3D Rococo Frame</h3>
+        <p class="mb-4">Web-based 3D frame built in Spline and Three.js.</p>
+        <a href="#" class="text-[#9b5de5] hover:underline">View Project</a>
+      </div>
+    </div>
+
+    <!-- Spot Vision -->
+    <section id="spot-vision" class="relative mt-20 py-20 px-6 md:px-12 bg-white text-black">
+      <!-- Purple Arrow Toggle Positioned Higher -->
+      <button id="spotToggle" class="absolute top-2 right-6 cursor-pointer">
+        <svg id="arrowIcon" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
+             fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+    
+      <h2 class="text-4xl font-bold text-[#9b5de5]">Spot Vision LLC</h2>
+      <h3 class="text-xl font-medium text-[#9b5de5] mb-8">Product Marketing Manager & Prototype Developer</h3>
+    
+      <!-- Collapsible Content -->
+      <div id="spotContent" class="hidden space-y-12">
+        <!-- Bio & Image -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          <div class="flex flex-col h-full text-lg space-y-6 leading-relaxed self-start mt-10">
+            <p>
+              Spot Vision is a machine learning lab revolutionizing scannable design and encoded graphics. 
+              Our proprietary technology embeds dynamic data directly into visual designs, transforming 
+              graphics into interactive digital touchpoints. We focus on creating high-tech, scannable 
+              designs for fashion-tech, collectibles, product packaging, and interactive media.
+            </p>
+    
+            <p>
+              As Product Marketing Manager, I prototyped use cases such as collectible art pieces, 
+              interactive apparel, scannable stickers, and product packaging tape — merging physical 
+              products with digital experiences.
+            </p>
+    
+            <p>
+              I led content production, managed our social media presence, and created commercial 
+              marketing assets. This included overseeing photo shoots, sourcing models and photographers, 
+              and developing visual prototypes to market our technology and future applications.
+            </p>
+    
+            <p>
+              To strengthen industry connections, I organized community meetups and industry gatherings, 
+              positioning Spot Vision at the intersection of design and machine learning innovation.
+            </p>
+    
+            <!-- Experiments Button -->
+            <button onclick="document.getElementById('experimentDetails').classList.toggle('hidden')" 
+                    class="mt-auto bg-[#9b5de5] hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold">
+              View Experiments, Projects, and Media
+            </button>
+          </div>
+    
+          <!-- Image -->
+          <div class="w-full h-full flex justify-center items-start">
+            <img src="./images/photoshoot/Model Shoot 1/tay.jpg" alt="Spot Vision Model Shoot" 
+                 class="w-[80%] h-auto object-cover rounded-lg">
+          </div>
+        </div>
+    
+        <!-- Experiments, Media & Social -->
+        <div id="experimentDetails" class="hidden space-y-12 mt-8">
+          <!-- PDF Experiments -->
+<div>
+  <h3 class="text-2xl font-semibold mb-4 text-[#9b5de5]">Experiments Archive</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <a href="/pdfs/terencepdf.pdf" target="_blank" 
+       class="bg-[#9b5de5] text-[#f0f0f0] p-4 rounded-lg text-center font-medium hover:bg-purple-700">
+      Data Encoded Stickers
+    </a>
+    <a href="/pdfs/experiment2.pdf" target="_blank" 
+       class="bg-[#9b5de5] text-[#f0f0f0] p-4 rounded-lg text-center font-medium hover:bg-purple-700">
+      Experiment 2
+    </a>
+    <a href="/pdfs/experiment3.pdf" target="_blank" 
+       class="bg-[#9b5de5] text-[#f0f0f0] p-4 rounded-lg text-center font-medium hover:bg-purple-700">
+      Experiment 3
+    </a>
+    <!-- Add more as needed -->
+  </div>
+</div>
+
+          </div>
+    
+          <!-- Photo Gallery -->
+<div>
+  <h3 class="text-2xl font-semibold mb-4 text-[#9b5de5]">Photo Gallery</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div class="rounded-lg shadow-lg overflow-hidden w-full h-[450px]">
+      <img src="./images/photoshoot/Model Shoot 1/bp.png" alt="Project 1" class="w-full h-full object-cover">
+    </div>
+    <div class="rounded-lg shadow-lg overflow-hidden w-full h-[450px]">
+      <img src="./images/photoshoot/Model Shoot 1/ps01.jpg" alt="Project 2" class="w-full h-full object-cover">
+    </div>
+    <div class="rounded-lg shadow-lg overflow-hidden w-full h-[450px]">
+      <img src="./images/photoshoot/Model Shoot 1/ps03.jpg" alt="Project 3" class="w-full h-full object-cover">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+    
+          <!-- Social Media -->
+          <div class="w-full max-w-5xl mx-auto">
+            <h3 class="text-2xl font-semibold mb-4 text-[#9b5de5]">Social Media Management Showcase</h3>
+            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+            <iframe src="https://lightwidget.com/widgets/7305b938064a52acab6d32d9328beecb.html" 
+                    scrolling="no" allowtransparency="true" 
+                    class="lightwidget-widget w-full h-[600px] border-0 overflow-hidden">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- JS for Dropdown Toggle & Arrow Rotation -->
+    <script>
+      const spotToggle = document.getElementById('spotToggle');
+      const spotContent = document.getElementById('spotContent');
+      const arrowIcon = document.getElementById('arrowIcon');
+    
+      spotToggle.addEventListener('click', () => {
+        spotContent.classList.toggle('hidden');
+        arrowIcon.classList.toggle('rotate-180');
+      });
+    </script>
+    
+    
+   
+
+    <section id="vst-uiux" class="relative py-16 px-6 md:px-12 bg-white text-black">
+      <!-- Purple Arrow Toggle -->
+      <button id="vstToggle" class="absolute top-2 right-6 cursor-pointer">
+        <svg id="vstArrow" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
+             fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+    
+      <h2 class="text-4xl font-bold text-[#9b5de5]">VST UI/UX Design</h2>
+    
+      <!-- Dropdown Content -->
+      <div id="vstContent" class="hidden space-y-12 mt-8">
+        <p class="text-lg max-w-3xl">
+          A showcase of VST plugin interfaces designed with usability, workflow, and aesthetic in mind — 
+          blending sound design tools with visual creativity.
+        </p>
+    
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <img src="./images/vs01.png" alt="VST Design 1"
+            class="rounded-lg shadow-lg w-full h-[300px] object-contain border-8 border-[#9b5de5] bg-black">
+          <img src="./images/vs02.png" alt="VST Design 2"
+            class="rounded-lg shadow-lg w-full h-[300px] object-contain border-8 border-[#9b5de5] bg-black">
+          <img src="./images/vs03.png" alt="VST Design 3"
+            class="rounded-lg shadow-lg w-full h-[300px] object-contain border-8 border-[#9b5de5] bg-black">
+          <img src="./images/vs04.png" alt="VST Design 4"
+            class="rounded-lg shadow-lg w-full h-[300px] object-contain border-8 border-[#9b5de5] bg-black">
+        </div>
+      </div>
+    </section>
+    
+    <!-- JS to Toggle VST Section -->
+    <script>
+      const vstToggle = document.getElementById('vstToggle');
+      const vstContent = document.getElementById('vstContent');
+      const vstArrow = document.getElementById('vstArrow');
+    
+      vstToggle.addEventListener('click', () => {
+        vstContent.classList.toggle('hidden');
+        vstArrow.classList.toggle('rotate-180');
+      });
+    </script>
+    
+  
+  
+  
+  
+<!-- Web Development Dropdown Section -->
+<section id="web-dev" class="relative py-16 px-6 md:px-12 bg-white text-black">
+  <!-- Purple Arrow Toggle -->
+  <button id="webToggle" class="absolute top-2 right-6 cursor-pointer">
+    <svg id="webArrow" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
+         fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+
+  <h2 class="text-4xl font-bold text-[#9b5de5]">Web Development</h2>
+
+  <!-- Dropdown Content -->
+  <div id="webContent" class="hidden mt-8">
+    <p class="text-lg">
+      Highlight web projects with code snippets, animations, or parallax effects. 
+      This section showcases my front-end and back-end builds, creative website concepts, and interactive digital experiences.
+    </p>
+    <!-- Example Content Block -->
+    <div class="mt-8 p-6 bg-[#f0f0f0] rounded-lg shadow-lg">
+      <h3 class="text-2xl font-semibold text-[#9b5de5] mb-4">Example Project</h3>
+      <p>This is where a featured web project could be highlighted, including frameworks, libraries, or animations used.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Graphic Design Dropdown Section -->
+<section id="graphic-design" class="relative py-16 px-6 md:px-12 bg-white text-black">
+  <!-- Purple Arrow Toggle -->
+  <button id="graphicToggle" class="absolute top-2 right-6 cursor-pointer">
+    <svg id="graphicArrow" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
+         fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+
+  <h2 class="text-4xl font-bold text-[#9b5de5]">Graphic Design</h2>
+
+  <!-- Dropdown Content -->
+  <div id="graphicContent" class="hidden mt-8">
+    <p class="text-lg">
+      Include your best design work, posters, digital illustrations, branding, and creative print projects. 
+      This section showcases visuals blending modern design principles and experimental graphics.
+    </p>
+    <!-- Example Content Block -->
+    <div class="mt-8 p-6 bg-[#f0f0f0] rounded-lg shadow-lg">
+      <h3 class="text-2xl font-semibold text-[#9b5de5] mb-4">Sample Poster Design</h3>
+      <p>A graphic project description or image preview could go here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Combined JavaScript for Both Dropdowns -->
+<script>
+  // Web Dev Toggle Logic
+  const webToggle = document.getElementById('webToggle');
+  const webContent = document.getElementById('webContent');
+  const webArrow = document.getElementById('webArrow');
+
+  webToggle.addEventListener('click', () => {
+    webContent.classList.toggle('hidden');
+    webArrow.classList.toggle('rotate-180');
+  });
+
+  // Graphic Design Toggle Logic
+  const graphicToggle = document.getElementById('graphicToggle');
+  const graphicContent = document.getElementById('graphicContent');
+  const graphicArrow = document.getElementById('graphicArrow');
+
+  graphicToggle.addEventListener('click', () => {
+    graphicContent.classList.toggle('hidden');
+    graphicArrow.classList.toggle('rotate-180');
+  });
+</script>
+
+<!-- VISUAL PROGRAMMING DROPDOWN -->
+<section id="visual-programming" class="relative py-16 px-6 md:px-12 bg-white text-black">
+  <!-- Purple Arrow Toggle -->
+  <button id="visualToggle" class="absolute top-2 right-6 cursor-pointer">
+    <svg id="visualArrow" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
+         fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+
+  <h2 class="text-4xl font-bold text-[#9b5de5]">Visual Programming</h2>
+
+  <!-- Dropdown Content -->
+  <div id="visualContent" class="hidden mt-8 space-y-8">
+    <p class="text-lg max-w-3xl">
+      A collection of projects built in TouchDesigner exploring real-time generative visuals and interactive systems.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <video class="rounded-lg shadow-lg w-full h-auto" controls muted>
+        <source src="./videos/01.mp4" type="video/mp4">
+      </video>
+      <video class="rounded-lg shadow-lg w-full h-auto" controls muted>
+        <source src="./videos/02.mp4" type="video/mp4">
+      </video>
+      <video class="rounded-lg shadow-lg w-full h-auto" controls muted>
+        <source src="./videos/03.mp4" type="video/mp4">
+      </video>
+      <video class="rounded-lg shadow-lg w-full h-auto" controls muted>
+        <source src="./videos/4.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNALISM DROPDOWN -->
+<section id="journalism" class="relative py-16 px-6 md:px-12 bg-white text-black">
+  <!-- Purple Arrow Toggle -->
+  <button id="journalismToggle" class="absolute top-2 right-6 cursor-pointer">
+    <svg id="journalismArrow" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
+         fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+
+  <h2 class="text-4xl font-bold text-[#9b5de5]">Journalism</h2>
+
+  <!-- Dropdown Content -->
+  <div id="journalismContent" class="hidden mt-8 space-y-8">
+    <p class="text-lg max-w-3xl">
+      Since August 2024, I have worked as a journalist and junior editor for <em>The Synapse</em> in partnership with Neuro Studio. 
+      My column explores the evolving role of technology—particularly AI—in shaping the creative processes of music producers 
+      and visual artists. I spotlight technical artists known for their innovative design approaches, examining their workflows, 
+      inspirations, and the driving forces behind their creativity.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <a href="https://neuro.studio/blogs/synapse-online/exploring-sublair-intersection-of-art-and-technology" target="_blank"
+         class="block bg-[#222] text-white rounded-lg shadow-lg hover:scale-105 transition transform duration-300 overflow-hidden">
+        <div class="aspect-w-16 aspect-h-9">
+          <img src="images/mindfabricqacover.webp" alt="Sublair Article" class="object-cover w-full h-full">
+        </div>
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-4">Exploring Sublair: The Intersection of Art and Technology</h3>
+          <p class="text-lg">A dive into Sublair, where underground art scenes meet technology-driven creative expression.</p>
+        </div>
+      </a>
+
+      <a href="https://neuro.studio/blogs/synapse-online/uses-of-ai-more-w-woulg-super-producer-educator" target="_blank"
+         class="block bg-[#222] text-white rounded-lg shadow-lg hover:scale-105 transition transform duration-300 overflow-hidden">
+        <div class="aspect-w-16 aspect-h-9">
+          <img src="images/woulg.webp" alt="Woulg AI Article" class="object-cover w-full h-full">
+        </div>
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-4">Uses of AI & More with Woulg - Super Producer & Educator</h3>
+          <p class="text-lg">An interview with Woulg on how AI tools reshape music production, art, and education.</p>
+        </div>
+      </a>
+
+      <a href="https://neuro.studio/blogs/synapse-online/catching-up-with-innovator-jack-lion" target="_blank"
+         class="block bg-[#222] text-white rounded-lg shadow-lg hover:scale-105 transition transform duration-300 overflow-hidden">
+        <div class="aspect-w-16 aspect-h-9">
+          <img src="images/jake.webp" alt="Jack Lion Article" class="object-cover w-full h-full">
+        </div>
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-4">Catching Up with Innovator Jack Lion</h3>
+          <p class="text-lg">An exploration of Jack Lion's experimental approach to sound design and production.</p>
+        </div>
+      </a>
+
+      <a href="https://neuro.studio/blogs/synapse-online/shields-neuro-studio-spotlight" target="_blank"
+         class="block bg-[#222] text-white rounded-lg shadow-lg hover:scale-105 transition transform duration-300 overflow-hidden">
+        <div class="aspect-w-16 aspect-h-9">
+          <img src="images/shields.jpg" alt="Shields Spotlight Article" class="object-cover w-full h-full">
+        </div>
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-4">Shields: Neuro Studio Spotlight</h3>
+          <p class="text-lg">Highlighting Shields' unique integration of visual programming and experimental sound.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- COMBINED JAVASCRIPT FOR DROPDOWNS -->
+<script>
+  // Visual Programming Dropdown
+  const visualToggle = document.getElementById('visualToggle');
+  const visualContent = document.getElementById('visualContent');
+  const visualArrow = document.getElementById('visualArrow');
+  visualToggle.addEventListener('click', () => {
+    visualContent.classList.toggle('hidden');
+    visualArrow.classList.toggle('rotate-180');
+  });
+
+  // Journalism Dropdown
+  const journalismToggle = document.getElementById('journalismToggle');
+  const journalismContent = document.getElementById('journalismContent');
+  const journalismArrow = document.getElementById('journalismArrow');
+  journalismToggle.addEventListener('click', () => {
+    journalismContent.classList.toggle('hidden');
+    journalismArrow.classList.toggle('rotate-180');
+  });
+</script>
+
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 px-6 md:px-12">
+    <h2 class="text-4xl font-bold text-[#9b5de5] mb-8">Contact Me</h2>
+    <p class="text-lg mb-4">Let’s create something together! Reach me at 
+      <a href="mailto:emilycinder96@yahoo.com" class="text-[#9b5de5] hover:underline">youremail@example.com</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center">
+    &copy; 2025 Emily Cinder. All rights reserved.
+  </footer>
+
+  <!-- Toggle Logic -->
+  <script>
+    const toggle = document.getElementById('mode-toggle');
+    window.onload = function () {
+      const isNight = localStorage.getItem('mode') === 'night';
+      toggle.checked = isNight;
+      if (isNight) document.body.classList.add('night-mode');
+    };
+    toggle.addEventListener('change', function () {
+      document.body.classList.toggle('night-mode', this.checked);
+      localStorage.setItem('mode', this.checked ? 'night' : 'day');
+    });
+  </script>
+
+</body>
+
+</html>
+
