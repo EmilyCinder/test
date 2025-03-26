@@ -401,16 +401,43 @@
   <!-- Dropdown Content -->
   <div id="webContent" class="hidden mt-8">
     <p class="text-lg">
-      Highlight web projects with code snippets, animations, or parallax effects. 
-      This section showcases my front-end and back-end builds, creative website concepts, and interactive digital experiences.
+      Explore my web projects showcasing front-end, back-end, creative concepts, and interactive experiences.
     </p>
-    <!-- Example Content Block -->
+
+    <!-- Crab Snare Co. Project -->
     <div class="mt-8 p-6 bg-[#f0f0f0] rounded-lg shadow-lg">
-      <h3 class="text-2xl font-semibold text-[#9b5de5] mb-4">Example Project</h3>
-      <p>This is where a featured web project could be highlighted, including frameworks, libraries, or animations used.</p>
+      <h3 class="text-2xl font-semibold text-[#9b5de5] mb-4">Crab Snare Co.</h3>
+      <p class="mb-4">A full e-commerce website built from scratch for a crab snaring business. Features animated sliders, a dynamic shopping cart, and responsive design.</p>
+      <a href="https://your-crab-snare-url.com" target="_blank" class="text-[#9b5de5] underline">View Site</a>
     </div>
+
+    <!-- Sublair Social Platform Project -->
+    <div class="mt-8 p-6 bg-[#f0f0f0] rounded-lg shadow-lg">
+      <h3 class="text-2xl font-semibold text-[#9b5de5] mb-4">Sublair Social Platform</h3>
+      <p class="mb-4">A conceptual social platform designed for underground artists. Features responsive layouts, profile interactions, and a creative community focus.</p>
+      <a href="https://your-sublair-url.com" target="_blank" class="text-[#9b5de5] underline">View Prototype</a>
+    </div>
+
+    <!-- Obsidian Rage Band Project -->
+    <div class="mt-8 p-6 bg-[#f0f0f0] rounded-lg shadow-lg">
+      <h3 class="text-2xl font-semibold text-[#9b5de5] mb-4">Obsidian Rage Band Tour Page</h3>
+      <p class="mb-4">A parallax-style landing page with pixelated red border animations, AI-generated band visuals, and responsive design for desktop and mobile.</p>
+      <a href="https://your-obsidian-rage-url.com" target="_blank" class="text-[#9b5de5] underline">View Project</a>
+    </div>
+
+    <!-- Add more projects here if needed -->
   </div>
 </section>
+
+<!-- JavaScript for Toggle -->
+<script>
+  document.getElementById('webToggle').addEventListener('click', function() {
+    const content = document.getElementById('webContent');
+    const arrow = document.getElementById('webArrow');
+    content.classList.toggle('hidden');
+    arrow.classList.toggle('rotate-180');
+  });
+</script>
 
 <!-- Graphic Design Dropdown Section -->
 <section id="graphic-design" class="relative py-16 px-6 md:px-12 bg-white text-black">
