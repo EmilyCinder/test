@@ -401,7 +401,8 @@
   <!-- Dropdown Content -->
   <div id="webContent" class="hidden mt-8">
     <p class="text-lg">
-      Explore my web projects showcasing front-end, back-end, creative concepts, and interactive experiences.
+      Highlight web projects with code snippets, animations, or parallax effects. 
+      This section showcases my front-end and back-end builds, creative website concepts, and interactive digital experiences.
     </p>
 
     <!-- Crab Snare Co. Project -->
@@ -411,33 +412,35 @@
       <a href="https://your-crab-snare-url.com" target="_blank" class="text-[#9b5de5] underline">View Site</a>
     </div>
 
-    <!-- Sublair Social Platform Project -->
+    <!-- Sublair Social Platform -->
     <div class="mt-8 p-6 bg-[#f0f0f0] rounded-lg shadow-lg">
       <h3 class="text-2xl font-semibold text-[#9b5de5] mb-4">Sublair Social Platform</h3>
-      <p class="mb-4">A conceptual social platform designed for underground artists. Features responsive layouts, profile interactions, and a creative community focus.</p>
+      <p class="mb-4">A conceptual social platform designed for underground artists. Features responsive layouts, profile interactions, and creative community focus.</p>
       <a href="https://your-sublair-url.com" target="_blank" class="text-[#9b5de5] underline">View Prototype</a>
     </div>
 
-    <!-- Obsidian Rage Band Project -->
+    <!-- Obsidian Rage Band Tour Page -->
     <div class="mt-8 p-6 bg-[#f0f0f0] rounded-lg shadow-lg">
       <h3 class="text-2xl font-semibold text-[#9b5de5] mb-4">Obsidian Rage Band Tour Page</h3>
       <p class="mb-4">A parallax-style landing page with pixelated red border animations, AI-generated band visuals, and responsive design for desktop and mobile.</p>
       <a href="https://your-obsidian-rage-url.com" target="_blank" class="text-[#9b5de5] underline">View Project</a>
     </div>
 
-    <!-- Add more projects here if needed -->
   </div>
 </section>
 
-<!-- JavaScript for Toggle -->
+<!-- JavaScript Toggle Function -->
 <script>
-  document.getElementById('webToggle').addEventListener('click', function() {
-    const content = document.getElementById('webContent');
-    const arrow = document.getElementById('webArrow');
-    content.classList.toggle('hidden');
-    arrow.classList.toggle('rotate-180');
+  const webToggle = document.getElementById('webToggle');
+  const webContent = document.getElementById('webContent');
+  const webArrow = document.getElementById('webArrow');
+
+  webToggle.addEventListener('click', () => {
+    webContent.classList.toggle('hidden');
+    webArrow.classList.toggle('rotate-180');
   });
 </script>
+
 
 <!-- Graphic Design Dropdown Section -->
 <section id="graphic-design" class="relative py-16 px-6 md:px-12 bg-white text-black">
