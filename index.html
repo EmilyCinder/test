@@ -109,35 +109,26 @@
   <nav id="desktop-menu" class="hidden md:flex flex-row space-x-6 text-base md:text-lg font-semibold">
     <a href="#about" class="text-[#9b5de5]">About</a>
     
-    <a href="#vst-uiux" class="text-[#9b5de5]">VST UI/UX</a>
+  
     <a href="#web-dev" class="text-[#9b5de5]">Web Dev</a>
-    <a href="#graphic-design" class="text-[#9b5de5]">Graphic</a>
+  
     <a href="#visual-programming" class="text-[#9b5de5]">Visual</a>
     <a href="#journalism" class="text-[#9b5de5]">Journalism</a>
     <a href="#contact" class="text-[#9b5de5]">Contact</a>
   </nav>
 </header>
 
-<!-- Mobile Menu - Bold Purple Links -->
-<div id="mobile-menu" class="hidden flex flex-col items-center space-y-6 p-6 bg-white dark:bg-[#1a1a1a] text-base md:text-lg font-semibold w-full">
-  <a href="#about" class="text-[#9b5de5]">About</a>
-  
-  <a href="#vst-uiux" class="text-[#9b5de5]">VST UI/UX</a>
-  <a href="#web-dev" class="text-[#9b5de5]">Web Dev</a>
-  <a href="#graphic-design" class="text-[#9b5de5]">Graphic</a>
-  <a href="#visual-programming" class="text-[#9b5de5]">Visual</a>
-  <a href="#journalism" class="text-[#9b5de5]">Journalism</a>
-  <a href="#contact" class="text-[#9b5de5]">Contact</a>
-</div>
+
+
 
 
 <!-- Mobile Menu - Slightly Larger, Purple Stroke -->
 <div id="mobile-menu" class="hidden flex flex-col items-center space-y-6 p-6 bg-white dark:bg-[#1a1a1a] text-base md:text-lg md:hidden shadow-lg w-full">
   <a href="#about" class="purple-stroke">About</a>
   
-  <a href="#vst-uiux" class="purple-stroke">VST UI/UX</a>
+  
   <a href="#web-dev" class="purple-stroke">Web Dev</a>
-  <a href="#graphic-design" class="purple-stroke">Graphic</a>
+  
   <a href="#visual-programming" class="purple-stroke">Visual</a>
   <a href="#journalism" class="purple-stroke">Journalism</a>
   <a href="#contact" class="purple-stroke">Contact</a>
@@ -296,10 +287,7 @@
           <div class="w-full max-w-5xl mx-auto">
             <h3 class="text-2xl font-semibold mb-4 text-[#9b5de5]">Social Media Management Showcase</h3>
             <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-            <iframe src="https://lightwidget.com/widgets/7305b938064a52acab6d32d9328beecb.html" 
-                    scrolling="no" allowtransparency="true" 
-                    class="lightwidget-widget w-full h-[600px] border-0 overflow-hidden">
-            </iframe>
+            <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/7305b938064a52acab6d32d9328beecb.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
           </div>
         </div>
       </div>
@@ -320,53 +308,7 @@
     
    
 
-    <section id="vst-uiux" class="relative py-16 px-6 md:px-12 bg-white text-black">
-      <!-- Purple Arrow Toggle -->
-      <button id="vstToggle" class="absolute top-2 right-6 cursor-pointer">
-        <svg id="vstArrow" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
-             fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
     
-      <h2 class="text-4xl font-bold text-[#9b5de5]">VST UI/UX Design</h2>
-    
-      <!-- Dropdown Content -->
-      <div id="vstContent" class="hidden space-y-12 mt-8">
-        <p class="text-lg max-w-3xl">
-          A showcase of VST plugin interfaces designed with usability, workflow, and aesthetic in mind — 
-          blending sound design tools with visual creativity.
-        </p>
-    
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <img src="./images/vs01.png" alt="VST Design 1"
-            class="rounded-lg shadow-lg w-full h-[300px] object-contain border-8 border-[#9b5de5] bg-black">
-          <img src="./images/vs02.png" alt="VST Design 2"
-            class="rounded-lg shadow-lg w-full h-[300px] object-contain border-8 border-[#9b5de5] bg-black">
-          <img src="./images/vs03.png" alt="VST Design 3"
-            class="rounded-lg shadow-lg w-full h-[300px] object-contain border-8 border-[#9b5de5] bg-black">
-          <img src="./images/vs04.png" alt="VST Design 4"
-            class="rounded-lg shadow-lg w-full h-[300px] object-contain border-8 border-[#9b5de5] bg-black">
-        </div>
-      </div>
-    </section>
-    
-    <!-- JS to Toggle VST Section -->
-    <script>
-      const vstToggle = document.getElementById('vstToggle');
-      const vstContent = document.getElementById('vstContent');
-      const vstArrow = document.getElementById('vstArrow');
-    
-      vstToggle.addEventListener('click', () => {
-        vstContent.classList.toggle('hidden');
-        vstArrow.classList.toggle('rotate-180');
-      });
-    </script>
-    
-  
-  
-  
-  
 <!-- Web Development Dropdown Section -->
 <section id="web-dev" class="relative py-16 px-6 md:px-12 bg-white text-black">
   <!-- Purple Arrow Toggle -->
@@ -410,102 +352,167 @@
   </div>
 </section>
 
-<!-- JavaScript Toggle Function -->
-<script>
-  const webToggle = document.getElementById('webToggle');
-  const webContent = document.getElementById('webContent');
-  const webArrow = document.getElementById('webArrow');
-
-  webToggle.addEventListener('click', () => {
-    webContent.classList.toggle('hidden');
-    webArrow.classList.toggle('rotate-180');
-  });
-</script>
 
 
-<!-- Graphic Design Dropdown Section -->
-<section id="graphic-design" class="relative py-16 px-6 md:px-12 bg-white text-black">
-  <!-- Purple Arrow Toggle -->
-  <button id="graphicToggle" class="absolute top-2 right-6 cursor-pointer">
-    <svg id="graphicArrow" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
+
+<!-- VISUAL SECTION WRAPPER WITH DROPDOWNS -->
+<section id="visual" class="relative py-16 px-6 md:px-12 bg-white">
+  <!-- Main Visual Dropdown Toggle -->
+  <button id="visualMainToggle" class="absolute top-2 right-6 cursor-pointer z-10">
+    <svg id="visualMainArrow" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
          fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
     </svg>
   </button>
 
-  <h2 class="text-4xl font-bold text-[#9b5de5]">Graphic Design</h2>
+  <h2 class="text-4xl font-bold text-[#9b5de5]">Visual</h2>
 
-  <!-- Dropdown Content -->
-  <div id="graphicContent" class="hidden mt-8">
-    <p class="text-lg">
-      Include your best design work, posters, digital illustrations, branding, and creative print projects. 
-      This section showcases visuals blending modern design principles and experimental graphics.
-    </p>
-    <!-- Example Content Block -->
-    <div class="mt-8 p-6 bg-[#f0f0f0] rounded-lg shadow-lg">
-      <h3 class="text-2xl font-semibold text-[#9b5de5] mb-4">Sample Poster Design</h3>
-      <p>A graphic project description or image preview could go here.</p>
-    </div>
-  </div>
+  <!-- COLLAPSIBLE CONTENT CONTAINER -->
+  <div id="visualMainContent" class="hidden space-y-20">
+
+    <!-- VST UI/UX DESIGN SUBSECTION -->
+    <section id="vst-uiux" class="relative mt-16">
+
+      <button id="vstToggle" class="absolute top-2 right-6 cursor-pointer">
+        <svg id="vstArrow" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
+             fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <h3 class="text-4xl font-bold text-[#9b5de5]">VST UI/UX Design</h3>
+      <div id="vstContent" class="hidden space-y-12 mt-8">
+        <p class="text-lg max-w-3xl">
+          A showcase of VST plugin interfaces designed with usability, workflow, and aesthetic in mind.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <img src="./images/vs01.png" class="rounded-lg shadow-lg h-[300px] object-contain border-8 border-[#9b5de5] bg-black" alt="">
+          <img src="./images/vs02.png" class="rounded-lg shadow-lg h-[300px] object-contain border-8 border-[#9b5de5] bg-black" alt="">
+          <img src="./images/vs03.png" class="rounded-lg shadow-lg h-[300px] object-contain border-8 border-[#9b5de5] bg-black" alt="">
+          <img src="./images/vs04.png" class="rounded-lg shadow-lg h-[300px] object-contain border-8 border-[#9b5de5] bg-black" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- GRAPHIC DESIGN SUBSECTION -->
+    <section id="graphic-design" class="relative">
+      <button id="graphicToggle" class="absolute top-2 right-6 cursor-pointer">
+        <svg id="graphicArrow" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
+             fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <h3 class="text-4xl font-bold text-[#9b5de5]">Graphic Design</h3>
+      <div id="graphicContent" class="hidden mt-8">
+        <p class="text-lg">
+          Include your best design work, posters, digital illustrations, branding, and print projects.
+        </p>
+        <div class="mt-8 p-6 bg-[#f0f0f0] rounded-lg shadow-lg">
+          <h4 class="text-2xl font-semibold text-[#9b5de5] mb-4">Sample Poster Design</h4>
+          <p>A graphic project description or image preview could go here.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISUAL PROGRAMMING SUBSECTION -->
+    <section id="visual-programming" class="relative">
+      <button id="visualToggle" class="absolute top-2 right-6 cursor-pointer">
+        <svg id="visualArrow" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
+             fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <h3 class="text-4xl font-bold text-[#9b5de5]">Visual Programming</h3>
+      <div id="visualContent" class="hidden mt-8 space-y-8">
+        <p class="text-lg max-w-3xl">
+          Projects built in TouchDesigner exploring real-time generative visuals and interactive systems.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <video class="rounded-lg shadow-lg w-full h-auto" controls muted>
+            <source src="./videos/td1.mp4" type="video/mp4">
+          </video>
+          <video class="rounded-lg shadow-lg w-full h-auto" controls muted>
+            <source src="./videos/td2.mp4" type="video/mp4">
+          </video>
+          <video class="rounded-lg shadow-lg w-full h-auto" controls muted>
+            <source src="./videos/td5.mp4" type="video/mp4">
+          </video>
+          <video class="rounded-lg shadow-lg w-full h-auto" controls muted>
+            <source src="./videos/td7.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+
+  </div> <!-- END OF visualMainContent -->
 </section>
 
-<!-- Combined JavaScript for Both Dropdowns -->
+<!-- JAVASCRIPT FOR TOGGLES -->
 <script>
-  // Web Dev Toggle Logic
-  const webToggle = document.getElementById('webToggle');
-  const webContent = document.getElementById('webContent');
-  const webArrow = document.getElementById('webArrow');
+  // Main Visual Dropdown
+  const visualMainToggle = document.getElementById('visualMainToggle');
+  const visualMainContent = document.getElementById('visualMainContent');
+  const visualMainArrow = document.getElementById('visualMainArrow');
 
-  webToggle.addEventListener('click', () => {
-    webContent.classList.toggle('hidden');
-    webArrow.classList.toggle('rotate-180');
+  visualMainToggle.addEventListener('click', () => {
+    visualMainContent.classList.toggle('hidden');
+    visualMainArrow.classList.toggle('rotate-180');
   });
 
-  // Graphic Design Toggle Logic
-  const graphicToggle = document.getElementById('graphicToggle');
-  const graphicContent = document.getElementById('graphicContent');
-  const graphicArrow = document.getElementById('graphicArrow');
+  // Subsection Toggles
+  const toggles = [
+    { toggleId: 'vstToggle', contentId: 'vstContent', arrowId: 'vstArrow' },
+    { toggleId: 'graphicToggle', contentId: 'graphicContent', arrowId: 'graphicArrow' },
+    { toggleId: 'visualToggle', contentId: 'visualContent', arrowId: 'visualArrow' }
+  ];
 
-  graphicToggle.addEventListener('click', () => {
-    graphicContent.classList.toggle('hidden');
-    graphicArrow.classList.toggle('rotate-180');
+  toggles.forEach(({ toggleId, contentId, arrowId }) => {
+    const toggle = document.getElementById(toggleId);
+    const content = document.getElementById(contentId);
+    const arrow = document.getElementById(arrowId);
+
+    toggle.addEventListener('click', () => {
+      content.classList.toggle('hidden');
+      arrow.classList.toggle('rotate-180');
+    });
   });
 </script>
 
-<!-- VISUAL PROGRAMMING DROPDOWN -->
-<section id="visual-programming" class="relative py-16 px-6 md:px-12 bg-white text-black">
-  <!-- Purple Arrow Toggle -->
-  <button id="visualToggle" class="absolute top-2 right-6 cursor-pointer">
-    <svg id="visualArrow" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
-         fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-    </svg>
-  </button>
 
-  <h2 class="text-4xl font-bold text-[#9b5de5]">Visual Programming</h2>
 
-  <!-- Dropdown Content -->
-  <div id="visualContent" class="hidden mt-8 space-y-8">
-    <p class="text-lg max-w-3xl">
-      A collection of projects built in TouchDesigner exploring real-time generative visuals and interactive systems.
-    </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <video class="rounded-lg shadow-lg w-full h-auto" controls muted>
-        <source src="./videos/td1.mp4" type="video/mp4">
-      </video>
-      <video class="rounded-lg shadow-lg w-full h-auto" controls muted>
-        <source src="./videos/td2.mp4" type="video/mp4">
-      </video>
-      <video class="rounded-lg shadow-lg w-full h-auto" controls muted>
-        <source src="./videos/td5.mp4" type="video/mp4">
-      </video>
-      <video class="rounded-lg shadow-lg w-full h-auto" controls muted>
-        <source src="./videos/td7.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- JOURNALISM DROPDOWN -->
 <section id="journalism" class="relative py-16 px-6 md:px-12 bg-white text-black">
