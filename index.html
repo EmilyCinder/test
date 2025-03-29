@@ -177,122 +177,108 @@
     <p class="text-lg max-w-3xl">I'm Emily, a creative technologist passionate about design, sound, and interactive media. Skilled in HTML, CSS, JavaScript, Tailwind CSS, Three.js, TouchDesigner, Ableton, and creative coding. My goal is to blend technology with storytelling to make immersive experiences.</p>
   </section>
 
+<!-- Spot Vision -->
+<section id="spot-vision" class="relative mt-20 py-20 px-6 md:px-12 bg-white text-black">
+  <!-- Purple Arrow Toggle Positioned Higher -->
+  <button id="spotToggle" class="absolute top-2 right-6 cursor-pointer">
+    <svg id="arrowIcon" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
+         fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
 
+  <h2 class="text-4xl font-bold text-[#9b5de5]">Recent Work: Spot Vision LLC</h2>
+  <h3 class="text-xl font-medium text-[#9b5de5] mb-8">Product Marketing Manager & Prototype Developer</h3>
 
-    <!-- Spot Vision -->
-    <section id="spot-vision" class="relative mt-20 py-20 px-6 md:px-12 bg-white text-black">
-      <!-- Purple Arrow Toggle Positioned Higher -->
-      <button id="spotToggle" class="absolute top-2 right-6 cursor-pointer">
-        <svg id="arrowIcon" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
-             fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-    
-      <h2 class="text-4xl font-bold text-[#9b5de5]">Recent Work: Spot Vision LLC</h2>
-      <h3 class="text-xl font-medium text-[#9b5de5] mb-8">Product Marketing Manager & Prototype Developer</h3>
-    
-      <!-- Collapsible Content -->
-      <div id="spotContent" class="hidden space-y-12">
-        <!-- Bio & Image -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          <div class="flex flex-col h-full text-lg space-y-6 leading-relaxed self-start mt-10">
-            <p>
-              Spot Vision is a machine learning lab revolutionizing scannable design and encoded graphics. 
-              Our proprietary technology embeds dynamic data directly into visual designs, transforming 
-              graphics into interactive digital touchpoints. We focus on creating high-tech, scannable 
-              designs for fashion-tech, collectibles, product packaging, and interactive media.
-            </p>
-    
-            <p>
-              As Product Marketing Manager, I prototyped use cases such as collectible art pieces, 
-              interactive apparel, scannable stickers, and product packaging tape — merging physical 
-              products with digital experiences.
-            </p>
-    
-            <p>
-              I led content production, managed our social media presence, and created commercial 
-              marketing assets. This included overseeing photo shoots, sourcing models and photographers, 
-              and developing visual prototypes to market our technology and future applications.
-            </p>
-    
-            <p>
-              To strengthen industry connections, I organized community meetups and industry gatherings, 
-              positioning Spot Vision at the intersection of design and machine learning innovation.
-            </p>
-    
-            <!-- Experiments Button -->
-            <button onclick="document.getElementById('experimentDetails').classList.toggle('hidden')" 
-                    class="mt-auto bg-[#9b5de5] hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold">
-              View Experiments, Projects, and Media
-            </button>
-          </div>
-    
-          <!-- Image -->
-          <div class="w-full h-full flex justify-center items-start">
-            <img src="./images/vines_backpack_scan_1K.png" alt="Spot Vision Model Shoot" 
-                 class="w-[80%] h-auto object-cover rounded-lg">
-          </div>
-        </div>
-    
-        <!-- Experiments, Media & Social -->
-        <div id="experimentDetails" class="hidden space-y-12 mt-8">
-          <!-- PDF Experiments -->
-<div>
-  <h3 class="text-2xl font-semibold mb-4 text-[#9b5de5]">Experiments Archive</h3>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-    <a href="/pdfs/terencepdf.pdf" target="_blank" 
-       class="bg-[#9b5de5] text-[#f0f0f0] p-4 rounded-lg text-center font-medium hover:bg-purple-700">
-      Data Encoded Stickers
-    </a>
-    <a href="/pdfs/experiment2.pdf" target="_blank" 
-       class="bg-[#9b5de5] text-[#f0f0f0] p-4 rounded-lg text-center font-medium hover:bg-purple-700">
-      Experiment 2
-    </a>
-    <a href="/pdfs/experiment3.pdf" target="_blank" 
-       class="bg-[#9b5de5] text-[#f0f0f0] p-4 rounded-lg text-center font-medium hover:bg-purple-700">
-      Experiment 3
-    </a>
-    <!-- Add more as needed -->
-  </div>
-</div>
+  <!-- Collapsible Content -->
+  <div id="spotContent" class="space-y-12">
+    <!-- Bio & Image -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      <div class="flex flex-col h-full text-lg space-y-6 leading-relaxed self-start mt-10">
+        <p>
+          Spot Vision is a machine learning lab revolutionizing scannable design and encoded graphics. 
+          Our proprietary technology embeds dynamic data directly into visual designs, transforming 
+          graphics into interactive digital touchpoints. We focus on creating high-tech, scannable 
+          designs for fashion-tech, collectibles, product packaging, and interactive media.
+        </p>
 
-          </div>
-    
-          <!-- Photo Gallery -->
-<div>
-  <h3 class="text-2xl font-semibold mb-4 text-[#9b5de5]">Photo Gallery</h3>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-    <div class="rounded-lg shadow-lg overflow-hidden w-full h-[450px]">
-      <img src="./images//modal1.jpg" alt="Project 1" class="w-full h-full object-cover">
+        <p>
+          As Product Marketing Manager, I prototyped use cases such as collectible art pieces, 
+          interactive apparel, scannable stickers, and product packaging tape — merging physical 
+          products with digital experiences.
+        </p>
+
+        <p>
+          I led content production, managed our social media presence, and created commercial 
+          marketing assets. This included overseeing photo shoots, sourcing models and photographers, 
+          and developing visual prototypes to market our technology and future applications.
+        </p>
+
+        <p>
+          To strengthen industry connections, I organized community meetups and industry gatherings, 
+          positioning Spot Vision at the intersection of design and machine learning innovation.
+        </p>
+      </div>
+
+      <!-- Image -->
+      <div class="w-full h-full flex justify-center items-start">
+        <img src="./images/vines_backpack_scan_1K.png" alt="Spot Vision Model Shoot" 
+             class="w-[80%] h-auto object-cover rounded-lg">
+      </div>
     </div>
-    <div class="rounded-lg shadow-lg overflow-hidden w-full h-[450px]">
-      <img src="./images/modal4.png" alt="Project 2" class="w-full h-full object-cover">
-    </div>
-    <div class="rounded-lg shadow-lg overflow-hidden w-full h-[450px]">
-      <img src="./images/17-_NZ60830.jpg" alt="Project 3" class="w-full h-full object-cover">
-    </div>
-  </div>
-</div>
 
-
-
-
-
-
-
-
-    
-          <!-- Social Media -->
-          <div class="w-full max-w-5xl mx-auto">
-            <h3 class="text-2xl font-semibold mb-4 text-[#9b5de5]">Social Media Management Showcase</h3>
-            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-            <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/7305b938064a52acab6d32d9328beecb.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+      <!-- Photo Gallery -->
+      <div>
+        <h3 class="text-2xl font-semibold mb-4 text-[#9b5de5]">Photo Gallery</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div class="rounded-lg shadow-lg overflow-hidden w-full h-[450px]">
+            <img src="./images/modal1.jpg" alt="Project 1" class="w-full h-full object-cover">
+          </div>
+          <div class="rounded-lg shadow-lg overflow-hidden w-full h-[450px]">
+            <img src="./images/modal4.png" alt="Project 2" class="w-full h-full object-cover">
+          </div>
+          <div class="rounded-lg shadow-lg overflow-hidden w-full h-[450px]">
+            <img src="./images/17-_NZ60830.jpg" alt="Project 3" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
-    </section>
-    
+
+      <!-- Social Media -->
+      <div class="w-full max-w-5xl mx-auto">
+        <h3 class="text-2xl font-semibold mb-4 text-[#9b5de5]">Social Media Management Showcase</h3>
+        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+        <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/7305b938064a52acab6d32d9328beecb.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+      </div>
+    </div>
+
+   
+  </div>
+</section>
+
+<!-- Interaction JS -->
+<script>
+  // Toggle Experiments with arrow
+  document.getElementById("spotToggle").addEventListener("click", function () {
+    const section = document.getElementById("experimentDetails");
+    section.classList.toggle("hidden");
+    document.getElementById("arrowIcon").classList.toggle("rotate-180");
+  });
+
+  // QR scan -> pattern reveal
+  document.getElementById("scanTrigger").addEventListener("click", function () {
+    const qr = document.getElementById("qrCode");
+    const pattern = document.getElementById("decoderPattern");
+
+    qr.classList.add("opacity-0");
+    qr.classList.remove("pointer-events-auto");
+
+    pattern.classList.remove("opacity-0");
+    pattern.classList.add("opacity-100");
+    pattern.classList.remove("pointer-events-none");
+  });
+</script>
+
+
     <!-- JS for Dropdown Toggle & Arrow Rotation -->
     <script>
       const spotToggle = document.getElementById('spotToggle');
@@ -356,7 +342,7 @@
 
 
 <!-- VISUAL SECTION WRAPPER WITH DROPDOWNS -->
-<section id="visual" class="relative py-16 px-6 md:px-12 bg-white">
+<section id="visual" class="relative py-16 px-6 md:px-12 bg-white text-black">
   <!-- Main Visual Dropdown Toggle -->
   <button id="visualMainToggle" class="absolute top-2 right-6 cursor-pointer z-10">
     <svg id="visualMainArrow" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
@@ -371,8 +357,7 @@
   <div id="visualMainContent" class="hidden space-y-20">
 
     <!-- VST UI/UX DESIGN SUBSECTION -->
-    <section id="vst-uiux" class="relative mt-16">
-
+    <section id="vst-uiux" class="relative">
       <button id="vstToggle" class="absolute top-2 right-6 cursor-pointer">
         <svg id="vstArrow" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
              fill="none" stroke="currentColor" viewBox="0 0 24 24">
