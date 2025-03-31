@@ -227,57 +227,53 @@
       </div>
     </div>
 
-      <!-- Photo Gallery -->
-      <div>
-        <h3 class="text-2xl font-semibold mb-4 text-[#9b5de5]">Photo Gallery</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          <div class="rounded-lg shadow-lg overflow-hidden w-full h-[450px]">
-            <img src="./images/modal1.jpg" alt="Project 1" class="w-full h-full object-cover">
-          </div>
-          <div class="rounded-lg shadow-lg overflow-hidden w-full h-[450px]">
-            <img src="./images/modal4.png" alt="Project 2" class="w-full h-full object-cover">
-          </div>
-          <div class="rounded-lg shadow-lg overflow-hidden w-full h-[450px]">
-            <img src="./images/17-_NZ60830.jpg" alt="Project 3" class="w-full h-full object-cover">
-          </div>
+    <!-- Photo Gallery -->
+    <div>
+      <h3 class="text-2xl font-semibold mb-4 text-[#9b5de5]">Photo Gallery</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="rounded-lg shadow-lg overflow-hidden w-full h-[450px]">
+          <img src="./images/modal1.jpg" alt="Project 1" class="w-full h-full object-cover">
         </div>
-      </div>
-
-      <!-- Social Media -->
-      <div class="w-full max-w-5xl mx-auto">
-        <h3 class="text-2xl font-semibold mb-4 text-[#9b5de5]">Social Media Management Showcase</h3>
-        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-        <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/7305b938064a52acab6d32d9328beecb.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+        <div class="rounded-lg shadow-lg overflow-hidden w-full h-[450px]">
+          <img src="./images/modal4.png" alt="Project 2" class="w-full h-full object-cover">
+        </div>
+        <div class="rounded-lg shadow-lg overflow-hidden w-full h-[450px]">
+          <img src="./images/17-_NZ60830.jpg" alt="Project 3" class="w-full h-full object-cover">
+        </div>
       </div>
     </div>
 
-   
+    <!-- Social Media -->
+    <div class="w-full max-w-5xl mx-auto">
+      <h3 class="text-2xl font-semibold mb-4 text-[#9b5de5]">Social Media Management Showcase</h3>
+      <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+      <iframe src="https://cdn.lightwidget.com/widgets/7305b938064a52acab6d32d9328beecb.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+    </div>
+
+    <!-- Terence the Salamander Experiment -->
+    <div class="mt-12">
+      <h3 class="text-2xl font-semibold mb-4 text-[#9b5de5]">Featured Experiment: Terence the Salamander</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-[#f0f0f0] rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300">
+          <img src="./images/terence.jpg" alt="Terence the Salamander" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h4 class="text-xl font-semibold text-[#9b5de5]">Terence the Salamander</h4>
+            <p class="mt-2 text-sm text-black">A programmable sticker series inspired by adaptability and transformation, built to showcase the power of encoded graphics for marketing, events, and authentication.</p>
+            <a href="terence.html" class="inline-block mt-4 text-[#9b5de5] underline">View Full Project</a>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <ul class="space-y-3 text-sm leading-relaxed">
+            <li><strong>🛠️ Tools:</strong> Illustrator, Acrobat, Cricut, Spot Vision Encoding</li>
+            <li><strong>🎯 Goals:</strong> User engagement, scannability, and scalability for market testing</li>
+            <li><strong>📦 Deliverables:</strong> Custom cut-and-laminated sticker prototypes with cloud-sync encoding</li>
+            <li><strong>🌐 Outcome:</strong> Proved the potential for programmable graphics in product marketing ecosystems</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-
-<!-- Interaction JS -->
-<script>
-  // Toggle Experiments with arrow
-  document.getElementById("spotToggle").addEventListener("click", function () {
-    const section = document.getElementById("experimentDetails");
-    section.classList.toggle("hidden");
-    document.getElementById("arrowIcon").classList.toggle("rotate-180");
-  });
-
-  // QR scan -> pattern reveal
-  document.getElementById("scanTrigger").addEventListener("click", function () {
-    const qr = document.getElementById("qrCode");
-    const pattern = document.getElementById("decoderPattern");
-
-    qr.classList.add("opacity-0");
-    qr.classList.remove("pointer-events-auto");
-
-    pattern.classList.remove("opacity-0");
-    pattern.classList.add("opacity-100");
-    pattern.classList.remove("pointer-events-none");
-  });
-</script>
-
 
     <!-- JS for Dropdown Toggle & Arrow Rotation -->
     <script>
