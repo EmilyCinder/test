@@ -145,14 +145,14 @@
 <!-- About -->
 <section id="about" class="py-16 px-6 md:px-12">
   <h2 class="text-4xl font-bold text-[#9b5de5] mb-8">About Me</h2>
-  <p class="text-lg max-w-3xl">I'm Emily, a creative technologist passionate about design, sound, and interactive media. Skilled in HTML, CSS, JavaScript, Tailwind CSS, Three.js, TouchDesigner, Ableton, and creative coding. My goal is to blend technology with storytelling to make immersive experiences.</p>
+  <p class="text-lg max-w-3xl">Hi, I’m Emily—an experimental web developer and interactive artist. I craft immersive digital experiences using modern code (HTML/CSS, JavaScript, Three.js) and Adobe Creative Suite for visual storytelling, while pushing boundaries with sensory installations in TouchDesigner and Ableton</p>
 </section>
 
 <!-- Spot Vision -->
 <section id="spot-vision" class="relative mt-20 py-20 px-6 md:px-12 bg-white text-black">
   <!-- Purple Arrow Toggle Positioned Higher -->
   <button id="spotToggle" class="absolute top-2 right-6 cursor-pointer">
-    <svg id="arrowIcon" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
+    <svg id="arrowIcon" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300 rotate-180"
          fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
     </svg>
@@ -161,8 +161,8 @@
   <h2 class="text-4xl font-bold text-[#9b5de5]">Recent Work: Spot Vision LLC</h2>
   <h3 class="text-xl font-medium text-[#9b5de5] mb-8">Product Marketing Manager & Prototype Developer</h3>
 
-  <!-- Collapsible Content -->
-  <div id="spotContent" class="space-y-12">
+  <!-- Collapsible Content - REMOVED THE EXTRA CLOSING DIV TAG THAT WAS HERE -->
+  <div id="spotContent" class="space-y-12 hidden">
     <!-- Bio & Image -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
       <div class="flex flex-col h-full text-lg space-y-6 leading-relaxed self-start mt-10">
@@ -297,7 +297,7 @@
   <div id="webContent" class="hidden space-y-8">
     <p class="text-lg max-w-3xl">
       I build responsive, interactive websites using HTML, CSS, JavaScript, and Tailwind CSS, 
-      enhanced with Adobe Creative Suite for visual design. My focus is on clean code and memorable user experiences.
+      enhanced with Adobe Creative Suite for visual design. My focus is on optimized and memorable user experiences.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -346,7 +346,7 @@
           <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">JavaScript</span>
           <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">CSS3</span>
         </div>
-        <a href="https://secret-birthday.com" target="_blank" class="text-[#9b5de5] hover:underline">View Project →</a>
+        <a href="https://emilycinder.github.io/30thinvitation/" target="_blank" class="text-[#9b5de5] hover:underline">View Project →</a>
       </div>
 
       <!-- Heavy Haul eCommerce -->
@@ -587,31 +587,40 @@
     document.body.classList.add('night-mode');
     modeToggle.checked = true;
   }
+// Section dropdown toggles
+const toggles = [
+  { 
+    button: 'spotToggle', 
+    content: 'spotContent', 
+    arrow: 'arrowIcon',
+    initiallyHidden: true  // Add this flag for Spot Vision
+  },
+  { button: 'webToggle', content: 'webContent', arrow: 'webArrow' },
+  { button: 'visualMainToggle', content: 'visualMainContent', arrow: 'visualMainArrow' },
+  { button: 'vstToggle', content: 'vstContent', arrow: 'vstArrow' },
+  { button: 'graphicToggle', content: 'graphicContent', arrow: 'graphicArrow' },
+  { button: 'visualToggle', content: 'visualContent', arrow: 'visualArrow' },
+  { button: 'journalismToggle', content: 'journalismContent', arrow: 'journalismArrow' }
+];
 
-  // Section dropdown toggles
-  const toggles = [
-    { button: 'spotToggle', content: 'spotContent', arrow: 'arrowIcon' },
-    { button: 'webToggle', content: 'webContent', arrow: 'webArrow' },
-    { button: 'visualMainToggle', content: 'visualMainContent', arrow: 'visualMainArrow' },
-    { button: 'vstToggle', content: 'vstContent', arrow: 'vstArrow' },
-    { button: 'graphicToggle', content: 'graphicContent', arrow: 'graphicArrow' },
-    { button: 'visualToggle', content: 'visualContent', arrow: 'visualArrow' },
-    { button: 'journalismToggle', content: 'journalismContent', arrow: 'journalismArrow' }
-  ];
+toggles.forEach(toggle => {
+  const button = document.getElementById(toggle.button);
+  const content = document.getElementById(toggle.content);
+  const arrow = document.getElementById(toggle.arrow);
 
-  toggles.forEach(toggle => {
-    const button = document.getElementById(toggle.button);
-    const content = document.getElementById(toggle.content);
-    const arrow = document.getElementById(toggle.arrow);
-
-    if (button && content && arrow) {
-      button.addEventListener('click', () => {
-        content.classList.toggle('hidden');
-        arrow.classList.toggle('rotate-180');
-      });
+  if (button && content && arrow) {
+    // Initialize state - hide Spot Vision content by default
+    if (toggle.initiallyHidden) {
+      content.classList.add('hidden');
+      arrow.classList.add('rotate-180');
     }
-  });
-
+    
+    button.addEventListener('click', () => {
+      content.classList.toggle('hidden');
+      arrow.classList.toggle('rotate-180');
+    });
+  }
+});
   // Active nav link highlighting
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('nav a');
