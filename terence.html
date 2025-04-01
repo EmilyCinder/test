@@ -3,66 +3,212 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terence the Salamander - Project Brief</title>
+  <title>TERENCE THE SALAMANDER | PROGRAMMABLE STICKER SOLUTION</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Inconsolata', monospace;
-      background: linear-gradient(to bottom right, #f0f0f0, #e4d9f7);
-      color: #111;
+      background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+      color: #212529;
+      line-height: 1.6;
+      text-transform: uppercase;
     }
     h1, h2, h3 {
-      color: #9b5de5;
+      font-weight: 600;
+      color: #6f42c1;
     }
     .section {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 2rem 1rem;
     }
     .glass {
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(10px);
-      border-radius: 1rem;
-      padding: 2rem;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .gallery-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .gallery-row-large {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    @media (max-width: 768px) {
+      .gallery-row, .gallery-row-large {
+        grid-template-columns: 1fr;
+      }
+    }
+    .gallery-img {
+      width: 100%;
+      height: 220px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .gallery-img-large {
+      height: 280px;
+    }
+    .gallery-img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+    }
+    .gallery-img img {
+      max-width: 90%;
+      max-height: 90%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+    .objective-item {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    .objective-item:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      width: 1rem;
+      height: 1rem;
+      background-color: #6f42c1;
+      border-radius: 50%;
+    }
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(111, 66, 193, 0.3), transparent);
+      margin: 2rem 0;
+    }
+    .bg-purple-50 {
+      background-color: rgba(245, 243, 255, 0.8);
+    }
+    .border-purple-100 {
+      border-color: rgba(214, 188, 250, 0.5);
+    }
+    .text-purple-800 {
+      color: #5b21b6;
     }
   </style>
 </head>
 <body>
   <section class="section">
     <div class="glass">
-      <h1 class="text-5xl font-bold mb-6">Terence the Salamander</h1>
-      <p class="mb-6 text-lg">The Terence the Salamander sticker series showcases the fusion of design and technology, creating interactive, scannable stickers. This project highlights the potential of programmable graphics for marketing, authentication, and digital engagement.</p>
+      <header class="mb-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">TERENCE THE SALAMANDER</h1>
+        <p class="text-xl font-medium text-gray-600">ENCODING DATA INTO GRAPHIC STICKERS</p>
+      </header>
 
-      <h2 class="text-3xl font-semibold mb-2">Project Brief</h2>
-      <p class="mb-6">The Terence experiment showcases my ability to conceptualize, design, and bring a product to market, blending creativity with technical precision. This programmable sticker, inspired by the salamander’s symbolism of adaptability and transformation, was developed to demonstrate how scannable technology can elevate user engagement and provide practical applications for marketing, product authentication, and events.</p>
+      <div class="divider"></div>
 
-      <h2 class="text-3xl font-semibold mb-2">Executive Summary</h2>
-      <p class="mb-6">This experiment involved the end-to-end development of a programmable sticker, including designing and prototyping with Adobe Photoshop and Illustrator, crafting a compelling product story, creating and producing custom packaging, reaching out to retail partners for market viability, optimizing production costs for scalability, and testing live prototypes to gather user feedback.</p>
+      <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4">PROJECT OVERVIEW</h2>
+        <p class="mb-6 text-lg">THE TERENCE THE SALAMANDER STICKER SERIES SHOWCASES THE FUSION OF DESIGN AND TECHNOLOGY, CREATING INTERACTIVE, SCANNABLE STICKERS. THIS PROJECT DEMONSTRATES HOW PROGRAMMABLE GRAPHICS CAN SOLVE REAL-WORLD PROBLEMS IN MARKETING, PRODUCT AUTHENTICATION, AND DIGITAL ENGAGEMENT THROUGH INNOVATIVE STICKER TECHNOLOGY.</p>
+        
+        <div class="bg-purple-50 p-6 rounded-xl border border-purple-100">
+          <h3 class="text-2xl font-semibold mb-3 text-purple-800">THE PROBLEM</h3>
+          <p class="mb-4">TRADITIONAL STICKERS SERVE LIMITED PURPOSES - DECORATION OR BASIC INFORMATION. THERE'S GROWING NEED FOR PHYSICAL PRODUCTS THAT BRIDGE THE DIGITAL WORLD, OFFERING INTERACTIVE EXPERIENCES AND AUTHENTICATION CAPABILITIES.</p>
+          <h3 class="text-2xl font-semibold mb-3 text-purple-800">THE SOLUTION</h3>
+          <p>PROGRAMMABLE STICKERS WITH ENCODED DATA THAT CAN BE SCANNED TO UNLOCK DIGITAL CONTENT OR VERIFY AUTHENTICITY - CREATING A SEAMLESS PHYGITAL (PHYSICAL+DIGITAL) EXPERIENCE.</p>
+        </div>
+      </section>
 
-      <h2 class="text-3xl font-semibold mb-2">Objectives</h2>
-      <ul class="list-disc ml-6 mb-6 space-y-2">
-        <li>Develop a programmable sticker using Spot Vision’s encoded graphic technology for interactive applications.</li>
-        <li>Ensure precision and high-fidelity production through vector design, registration marks, and accurate cutting.</li>
-        <li>Optimize scalability with cost-effective production methods and explore retail partnerships.</li>
-        <li>Enhance user engagement by testing prototypes and refining interactivity for real-world use.</li>
-      </ul>
+      <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4">PROJECT BRIEF</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-2">EXPERIMENT</h3>
+            <p>THE TERENCE EXPERIMENT SHOWCASES MY ABILITY TO CONCEPTUALIZE, DESIGN, AND BRING A PRODUCT TO MARKET, BLENDING CREATIVITY WITH TECHNICAL PRECISION. THIS PROGRAMMABLE STICKER WAS DEVELOPED TO DEMONSTRATE HOW SCANNABLE TECHNOLOGY CAN ELEVATE USER ENGAGEMENT.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">EXECUTIVE SUMMARY</h3>
+            <p>THIS EXPERIMENT INVOLVED THE END-TO-END DEVELOPMENT OF A PROGRAMMABLE STICKER, INCLUDING DESIGNING AND PROTOTYPING WITH ADOBE CREATIVE SUITE, CREATING CUSTOM PACKAGING, EXPLORING RETAIL PARTNERSHIPS, OPTIMIZING PRODUCTION COSTS, AND TESTING PROTOTYPES.</p>
+          </div>
+        </div>
+      </section>
 
-      <h2 class="text-3xl font-semibold mb-2">Design Approach</h2>
-      <p class="mb-6">The “Terence the Salamander” sticker series was designed and produced using Spot Vision’s encoded graphic technology, ensuring each sticker featured unique, programmable codes. Custom registration marks in Adobe Acrobat enabled precise alignment for cutting and lamination, while a cloud-based system dynamically refreshed encoded graphics. High-fidelity production was maintained through Cricut precision cutting and lamination, ensuring durability and scannability. This process created interactive, functional stickers ready for integration into digital ecosystems, blending art, technology, and automation.</p>
+      <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4">OBJECTIVES</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="objective-item">DEVELOP A PROGRAMMABLE STICKER USING ENCODED GRAPHIC TECHNOLOGY</div>
+          <div class="objective-item">ENSURE PRECISION THROUGH VECTOR DESIGN AND ACCURATE PRODUCTION</div>
+          <div class="objective-item">OPTIMIZE PRODUCTION METHODS FOR SCALABILITY</div>
+          <div class="objective-item">ENHANCE USER ENGAGEMENT THROUGH INTERACTIVE PROTOTYPES</div>
+        </div>
+      </section>
 
-      <h2 class="text-3xl font-semibold mb-2">Conclusion</h2>
-      <p class="mb-6">The Terence experiment is a successful blend of creative vision and technical execution, serving as a model for how programmable visuals can redefine engagement in modern marketing and design practices.</p>
+      <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4">DESIGN APPROACH</h2>
+        <p class="mb-6">THE "TERENCE THE SALAMANDER" STICKER SERIES WAS DESIGNED USING ENCODED GRAPHIC TECHNOLOGY, ENSURING EACH STICKER FEATURED UNIQUE, PROGRAMMABLE CODES. CUSTOM REGISTRATION MARKS ENABLED PRECISE ALIGNMENT FOR CUTTING AND LAMINATION.</p>
+        <p>HIGH-FIDELITY PRODUCTION WAS MAINTAINED THROUGH PRECISION CUTTING TECHNIQUES, ENSURING DURABILITY AND SCANNABILITY. THIS CREATED FUNCTIONAL STICKERS READY FOR INTEGRATION INTO DIGITAL ECOSYSTEMS, BLENDING ART AND TECHNOLOGY.</p>
+      </section>
 
-      
-        <img src="./images/4 port/newexperimentalterrance.png" alt="Terence Sticker 1" class="rounded-lg shadow-lg hover:scale-105 transition">
-        <img src="./images/4 port/salamander_alpha - Copy.png" alt="Terence Sticker 2" class="rounded-lg shadow-lg hover:scale-105 transition">
-        <img src="./images/4 port/terence_packaging_png.png" alt="Terence Sticker 3" class="rounded-lg shadow-lg hover:scale-105 transition">
-        <img src="./images/4 port/terence_version01.png" alt="Terence Sticker 4" class="rounded-lg shadow-lg hover:scale-105 transition">
-        <img src="./images/trialrunslamander.png" alt="Terence Sticker 5" class="rounded-lg shadow-lg hover:scale-105 transition">
-        <img src="./images/1002.png" alt="Terence Sticker 6" class="rounded-lg shadow-lg hover:scale-105 transition">
-      
+      <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4">PROCESS GALLERY</h2>
+        
+        <!-- First row of 3 images -->
+        <div class="gallery-row">
+          <div class="gallery-img">
+            <img src="./images/4 port/newexperimentalterrance.png" alt="INITIAL CONCEPT DESIGN">
+          </div>
+          <div class="gallery-img">
+            <img src="./images/4 port/salamander_alpha - Copy.png" alt="ALPHA VERSION TESTING">
+          </div>
+          <div class="gallery-img">
+            <img src="./images/4 port/terence_packaging_png.png" alt="CUSTOM PACKAGING DESIGN">
+          </div>
+        </div>
+        
+        <!-- Second row of 3 images -->
+        <div class="gallery-row">
+          <div class="gallery-img">
+            <img src="./images/4 port/terence_version01.png" alt="FINAL PRODUCTION VERSION">
+          </div>
+          <div class="gallery-img">
+            <img src="./images/trialrunslamander.png" alt="PROTOTYPE TESTING">
+          </div>
+          <div class="gallery-img">
+            <img src="./images/1002.png" alt="CODE INTEGRATION PROCESS">
+          </div>
+        </div>
+        
+        <!-- Third row of 2 larger images -->
+        <div class="gallery-row-large">
+          <div class="gallery-img gallery-img-large">
+            <img src="./images/terenceexamplecode.png" alt="ALTERNATIVE DESIGNS">
+          </div>
+          <div class="gallery-img gallery-img-large">
+            <img src="./images/decoder.jpg" alt="PRODUCTION SAMPLES">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-3xl font-semibold mb-4">CONCLUSION</h2>
+        <p class="mb-6">THE TERENCE EXPERIMENT SUCCESSFULLY CREATED A BRIDGE BETWEEN PHYSICAL PRODUCTS AND DIGITAL EXPERIENCES. THE PROJECT DEMONSTRATED THAT PROGRAMMABLE STICKERS CAN EFFECTIVELY SERVE MULTIPLE FUNCTIONS:</p>
+        <ul class="list-disc ml-6 mb-6 space-y-2">
+          <li>AUTHENTICATION MARKERS FOR PRODUCT VERIFICATION</li>
+          <li>INTERACTIVE ELEMENTS THAT CONNECT TO DIGITAL CONTENT</li>
+          <li>COST-EFFECTIVE PRODUCTION AT SCALE</li>
+          <li>RETAIL-READY PACKAGING AND PRESENTATION</li>
+        </ul>
+        <p>THIS SOLUTION REPRESENTS A MODEL FOR HOW PROGRAMMABLE VISUALS CAN ENHANCE BOTH CREATIVE DESIGN AND TECHNICAL APPLICATIONS IN PHYSICAL PRODUCTS.</p>
+      </section>
     </div>
   </section>
 </body>

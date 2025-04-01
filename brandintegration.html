@@ -3,78 +3,212 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Solving Brand Integration with Encoded Logos</title>
+  <title>SOLVING BRAND INTEGRATION WITH ENCODED LOGOS</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Inconsolata', monospace;
       background: linear-gradient(to bottom right, #f0f0f0, #dad2e9);
       color: #111;
+      line-height: 1.6;
     }
     h1, h2, h3 {
+      font-weight: 600;
       color: #9b5de5;
     }
     .section {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 2rem 1rem;
     }
     .glass {
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(10px);
-      border-radius: 1rem;
-      padding: 2rem;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .gallery-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .gallery-row-large {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    @media (max-width: 768px) {
+      .gallery-row, .gallery-row-large {
+        grid-template-columns: 1fr;
+      }
+    }
+    .gallery-img {
+      width: 100%;
+      height: 220px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .gallery-img-large {
+      height: 280px;
+    }
+    .gallery-img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+    }
+    .gallery-img img {
+      max-width: 90%;
+      max-height: 90%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+    .objective-item {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    .objective-item:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      width: 1rem;
+      height: 1rem;
+      background-color: #9b5de5;
+      border-radius: 50%;
+    }
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(155, 93, 229, 0.3), transparent);
+      margin: 2rem 0;
+    }
+    .bg-purple-50 {
+      background-color: rgba(245, 243, 255, 0.8);
+    }
+    .border-purple-100 {
+      border-color: rgba(214, 188, 250, 0.5);
+    }
+    .text-purple-800 {
+      color: #5b21b6;
     }
   </style>
 </head>
 <body>
   <section class="section">
     <div class="glass">
-      <h1 class="text-5xl font-bold mb-6">Solving Brand Integration with Encoded Logos</h1>
-      <p class="mb-6 text-lg">This experiment explored how to integrate company branding with encoded graphics — specifically, whether logos could be layered over scannable patterns without disrupting their function. We tested this in a real-world context by designing a custom shirt for Isai that combines logo visibility with scan performance.</p>
+      <header class="mb-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">SOLVING BRAND INTEGRATION WITH ENCODED LOGOS</h1>
+        <p class="text-xl font-medium text-gray-600">EXPERIMENTAL MERCHANDISE DESIGN FOR ISAI</p>
+      </header>
 
-      <h2 class="text-3xl font-semibold mb-2">The Problem</h2>
-      <p class="mb-6">As fashion merges with digital tools, the challenge is how to maintain branding while enabling interactive, scannable features. Traditional logos can clash visually or disrupt encoded structures. We needed to determine whether layered branding could enhance or harm scannability — especially for authentication and co-branded merchandise.</p>
+      <div class="divider"></div>
 
-      <h2 class="text-3xl font-semibold mb-2">The Solution</h2>
-      <p class="mb-6">We developed a method for layering SVG logos on top of encoded graphics using vector editing tools. This aimed to create a hybrid visual language that preserved scannability while introducing brand identity. The Isai prototype shirt served as the testing ground for this design strategy.</p>
-
-      <h2 class="text-3xl font-semibold mb-2">Problem-Solving Approach</h2>
-      <ul class="list-disc ml-6 mb-6 space-y-2">
-        <li>Created encoded graphics as a base layer using Spot Vision’s design pipeline.</li>
-        <li>Overlaid branded SVG logos on top, adjusting opacity, blend modes, and scale.</li>
-        <li>Tested visual legibility and scannability using phones and computer vision tools.</li>
-        <li>Refined mockups to find a balance between aesthetic and technical clarity.</li>
-      </ul>
-
-      <h2 class="text-3xl font-semibold mb-2">Design Execution</h2>
-      <p class="mb-6">The final composition was assembled in Photoshop, where we layered the logo over a red encoded pattern and adjusted contrast for clarity. We printed the graphic onto a t-shirt, ensuring the encoding was still functional in both indoor and outdoor environments. Isai wore the shirt for real-world testing.</p>
-
-      <h2 class="text-3xl font-semibold mb-2">Outcomes</h2>
-      <p class="mb-6">The resulting prototype confirmed that branded overlays can be applied without disrupting scannability — as long as spacing, contrast, and logo placement are technically considered. This opens up future potential for fashion-tech collabs, co-branded drops, and authentication layers that are both expressive and functional.</p>
-
-      <h2 class="text-3xl font-semibold mb-2">Gallery</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
-        <img src="./images/integration1.jpg" alt="Isai Shirt Front" class="rounded-lg shadow-lg hover:scale-105 transition">
-        <img src="./images/integration2.jpg" alt="Layered Logo Detail" class="rounded-lg shadow-lg hover:scale-105 transition">
-        <img src="./images/integration3.jpg" alt="Photoshop Mockup" class="rounded-lg shadow-lg hover:scale-105 transition">
-        <img src="./images/integration4.jpg" alt="Back of Shirt" class="rounded-lg shadow-lg hover:scale-105 transition">
-        <img src="./images/integration5.jpg" alt="Scannability Test" class="rounded-lg shadow-lg hover:scale-105 transition">
-        <img src="./images/integration6.jpg" alt="Final Output" class="rounded-lg shadow-lg hover:scale-105 transition">
-      </div>
-
-      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
-          <img src="./images/integration_feature1.jpg" alt="Feature Image 1" class="w-full h-full object-cover">
+      <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4">PROJECT OVERVIEW</h2>
+        <p class="mb-6 text-lg">THIS EXPERIMENT EXPLORED HOW TO INTEGRATE COMPANY BRANDING WITH ENCODED GRAPHICS — SPECIFICALLY, WHETHER LOGOS COULD BE LAYERED OVER SCANNABLE PATTERNS WITHOUT DISRUPTING THEIR FUNCTION. WE TESTED THIS IN A REAL-WORLD CONTEXT BY DESIGNING A CUSTOM SHIRT FOR ISAI.</p>
+        
+        <div class="bg-purple-50 p-6 rounded-xl border border-purple-100">
+          <h3 class="text-2xl font-semibold mb-3 text-purple-800">THE PROBLEM</h3>
+          <p class="mb-4">AS FASHION MERGES WITH DIGITAL TOOLS, THE CHALLENGE IS HOW TO MAINTAIN BRANDING WHILE ENABLING INTERACTIVE, SCANNABLE FEATURES. TRADITIONAL LOGOS CAN CLASH VISUALLY OR DISRUPT ENCODED STRUCTURES.</p>
+          <h3 class="text-2xl font-semibold mb-3 text-purple-800">THE SOLUTION</h3>
+          <p>WE DEVELOPED A METHOD FOR LAYERING SVG LOGOS ON TOP OF ENCODED GRAPHICS USING VECTOR EDITING TOOLS, PRESERVING SCANNABILITY WHILE INTRODUCING BRAND IDENTITY.</p>
         </div>
-        <div class="rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
-          <img src="./images/integration_feature2.jpg" alt="Feature Image 2" class="w-full h-full object-cover">
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4">PROBLEM-SOLVING APPROACH</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-2">TECHNICAL CHALLENGE</h3>
+            <p>CREATED ENCODED GRAPHICS AS A BASE LAYER USING SPOT VISION'S DESIGN PIPELINE, THEN OVERLAID BRANDED SVG LOGOS WITH PRECISE OPACITY AND BLEND MODE ADJUSTMENTS.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">TESTING PHASE</h3>
+            <p>CONDUCTED MULTIPLE SCANNABILITY TESTS USING PHONES AND COMPUTER VISION TOOLS TO ENSURE THE ENCODED DATA REMAINED FUNCTIONAL BENEATH THE BRANDED OVERLAY.</p>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4">KEY INNOVATIONS</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="objective-item">SVG LOGO INTEGRATION WITHOUT SCAN INTERFERENCE</div>
+          <div class="objective-item">PRECISE OPACITY AND BLEND MODE CALIBRATION</div>
+          <div class="objective-item">REAL-WORLD WEAR TESTING WITH ARTIST ISAI</div>
+          <div class="objective-item">PRODUCTION-READY FILE PREPARATION</div>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4">DESIGN EXECUTION</h2>
+        <p class="mb-6">THE FINAL COMPOSITION WAS ASSEMBLED IN PHOTOSHOP, LAYERING THE LOGO OVER A RED ENCODED PATTERN WITH CONTRAST ADJUSTMENTS FOR CLARITY. WE PRINTED THE GRAPHIC ONTO A T-SHIRT, ENSURING ENCODING FUNCTIONALITY IN VARIOUS LIGHTING CONDITIONS.</p>
+        <p>ISAI WORN THE SHIRT FOR EXTENDED REAL-WORLD TESTING, PROVIDING VALUABLE FEEDBACK ON BOTH AESTHETICS AND TECHNICAL PERFORMANCE.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4">PROCESS GALLERY</h2>
+        
+        <!-- First row of 3 images -->
+        <div class="gallery-row">
+          <div class="gallery-img">
+            <img src="./images/APC_0041.jpg" alt="ISAI SHIRT FRONT VIEW">
+          </div>
+          <div class="gallery-img">
+            <img src="./images/final.isaias.png" alt="LAYERED LOGO DETAIL">
+          </div>
+          <div class="gallery-img">
+            <img src="./images/Untitled-1.png" alt="PHOTOSHOP MOCKUP">
+          </div>
+        </div>
+        
+        <!-- Second row of 3 images -->
+        <div class="gallery-row">
+          <div class="gallery-img">
+            <img src="./images/integration4.jpg" alt="SHIRT BACK VIEW">
+          </div>
+          <div class="gallery-img">
+            <img src="./images/integration5.jpg" alt="SCANNABILITY TESTING">
+          </div>
+          <div class="gallery-img">
+            <img src="./images/integration6.jpg" alt="FINAL OUTPUT">
+          </div>
+        </div>
+        
+        <!-- Third row of 2 larger images -->
+        <div class="gallery-row-large">
+          <div class="gallery-img gallery-img-large">
+            <img src="./images/integration_feature1.jpg" alt="FEATURE DETAIL SHOT">
+          </div>
+          <div class="gallery-img gallery-img-large">
+            <img src="./images/decoder.jpg" alt="DECODER INTERFACE">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-3xl font-semibold mb-4">OUTCOMES</h2>
+        <p class="mb-6">THE PROTOTYPE CONFIRMED THAT BRANDED OVERLAYS CAN BE APPLIED WITHOUT DISRUPTING SCANNABILITY WHEN THESE FACTORS ARE CONSIDERED:</p>
+        <ul class="list-disc ml-6 mb-6 space-y-2">
+          <li>PRECISE SPACING AROUND ENCODED ELEMENTS</li>
+          <li>OPTIMAL CONTRAST BETWEEN LAYERS</li>
+          <li>STRATEGIC LOGO PLACEMENT</li>
+          <li>MATERIAL-SPECIFIC ADJUSTMENTS</li>
+        </ul>
+        <p>THIS SOLUTION ENABLES FUTURE FASHION-TECH COLLABORATIONS WHERE BRAND EXPRESSION AND DIGITAL FUNCTIONALITY COEXIST SEAMLESSLY.</p>
+      </section>
     </div>
   </section>
 </body>
 </html>
-

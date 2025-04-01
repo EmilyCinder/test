@@ -108,51 +108,23 @@
   <!-- Desktop Nav - Bold Purple Links -->
   <nav id="desktop-menu" class="hidden md:flex flex-row space-x-6 text-base md:text-lg font-semibold">
     <a href="#about" class="text-[#9b5de5]">About</a>
-    
-  
     <a href="#web-dev" class="text-[#9b5de5]">Web Dev</a>
-  
     <a href="#visual-programming" class="text-[#9b5de5]">Visual</a>
     <a href="#journalism" class="text-[#9b5de5]">Journalism</a>
     <a href="#contact" class="text-[#9b5de5]">Contact</a>
   </nav>
 </header>
 
-
-
-
-
 <!-- Mobile Menu - Slightly Larger, Purple Stroke -->
 <div id="mobile-menu" class="hidden flex flex-col items-center space-y-6 p-6 bg-white dark:bg-[#1a1a1a] text-base md:text-lg md:hidden shadow-lg w-full">
   <a href="#about" class="purple-stroke">About</a>
-  
-  
   <a href="#web-dev" class="purple-stroke">Web Dev</a>
-  
   <a href="#visual-programming" class="purple-stroke">Visual</a>
   <a href="#journalism" class="purple-stroke">Journalism</a>
   <a href="#contact" class="purple-stroke">Contact</a>
 </div>
 
-<!-- JS for Menu Toggle and Dark Mode -->
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const modeToggle = document.getElementById('mode-toggle');
-
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-
-  modeToggle.addEventListener('change', () => {
-    document.documentElement.classList.toggle('dark');
-  });
-</script>
-
-
-
-
- <!-- Hero Section -->
+<!-- Hero Section -->
 <section class="relative w-full h-[80vh] md:h-screen overflow-hidden">
   <!-- Video Background -->
   <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
@@ -170,12 +142,11 @@
   </div>
 </section>
 
-
-  <!-- About -->
-  <section id="about" class="py-16 px-6 md:px-12">
-    <h2 class="text-4xl font-bold text-[#9b5de5] mb-8">About Me</h2>
-    <p class="text-lg max-w-3xl">I'm Emily, a creative technologist passionate about design, sound, and interactive media. Skilled in HTML, CSS, JavaScript, Tailwind CSS, Three.js, TouchDesigner, Ableton, and creative coding. My goal is to blend technology with storytelling to make immersive experiences.</p>
-  </section>
+<!-- About -->
+<section id="about" class="py-16 px-6 md:px-12">
+  <h2 class="text-4xl font-bold text-[#9b5de5] mb-8">About Me</h2>
+  <p class="text-lg max-w-3xl">I'm Emily, a creative technologist passionate about design, sound, and interactive media. Skilled in HTML, CSS, JavaScript, Tailwind CSS, Three.js, TouchDesigner, Ableton, and creative coding. My goal is to blend technology with storytelling to make immersive experiences.</p>
+</section>
 
 <!-- Spot Vision -->
 <section id="spot-vision" class="relative mt-20 py-20 px-6 md:px-12 bg-white text-black">
@@ -249,74 +220,71 @@
       <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
       <iframe src="https://cdn.lightwidget.com/widgets/7305b938064a52acab6d32d9328beecb.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
     </div>
-    <!-- ARCHIVE SECTION RESTORED -->
 
-</section>
-<!-- EXPERIMENTS ARCHIVE (POLISHED & PROFESSIONAL) -->
-<section id="experiments" class="py-16 px-6 md:px-12 bg-white text-black">
-  <h2 class="text-4xl font-bold text-[#9b5de5] mb-8">Experiments Archive</h2>
-  <p class="text-lg max-w-4xl mb-8">A curated archive of visual experiments, design systems, and fashion-tech prototypes. Each entry reflects my multidisciplinary skillset across UX design, branding, creative coding, and digital production.</p>
+    <!-- EXPERIMENTS ARCHIVE SECTION -->
+    <div id="experiments" class="w-full">
+      <h2 class="text-4xl font-bold text-[#9b5de5] mb-8">TECHNICAL EXPERIMENTS ARCHIVE</h2>
+      <p class="text-lg max-w-4xl mb-8">A collection of experiments in encoded graphics, interactive media, and design systems. Each project combines technical innovation with creative execution.</p>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-    <!-- OBSIDIAN RAGE -->
-    <a href="obsidian.html" class="bg-white border border-gray-200 p-5 rounded-xl shadow-md hover:shadow-lg transition-all">
-      <img src="./images/integration5.jpg" alt="Obsidian Rage Crow" class="rounded-md mb-4 object-cover h-56 w-full">
-      <h3 class="text-xl font-bold text-[#9b5de5]">Obsidian Rage</h3>
-      <p class="text-sm mt-2">Encapsulated crow encoding for symbolic identity and merch design.</p>
-      <p class="text-xs mt-2 text-gray-700">Skills: Visual Systems Design, Symbolic Encoding, Typography</p>
-      <p class="text-xs text-gray-500 italic">Role: Lead Concept Designer</p>
-    </a>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <!-- ENCAPSULATED ENCODED DATA -->
+        <a href="obsidian.html" class="project-card bg-white p-5 rounded-xl">
+          <img src="./images/APC_0042.jpg" alt="Encoded Crow Design" class="rounded-md mb-4 object-cover h-56 w-full">
+          <h3 class="text-xl font-bold text-[#9b5de5]">ENCAPSULATED ENCODED DATA</h3>
+          <p class="text-sm mt-2">Developed a symbolic crow motif with embedded scannable data for authentication and interactive applications.</p>
+          <div class="mt-4">
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">DATA ENCODING</span>
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">VECTOR DESIGN</span>
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">BRAND SYSTEMS</span>
+          </div>
+          <p class="text-xs mt-2 text-gray-700">Technical: Adobe Illustrator, Spot Vision SDK, Adobe Photoshop</p>
+        </a>
 
-    <!-- BRAND INTEGRATION -->
-    <a href="brandintegration.html" class="bg-white border border-gray-200 p-5 rounded-xl shadow-md hover:shadow-lg transition-all">
-      <img src="./images/integration2.jpg" alt="Isai Shirt Integration" class="rounded-md mb-4 object-cover h-56 w-full">
-      <h3 class="text-xl font-bold text-[#9b5de5]">Brand Integration</h3>
-      <p class="text-sm mt-2">Merged SVG logos with encoded patterns to test scannability and aesthetics.</p>
-      <p class="text-xs mt-2 text-gray-700">Skills: Illustrator, Branding, SVG Layering, UX Testing</p>
-      <p class="text-xs text-gray-500 italic">Role: Visual Systems Prototyper</p>
-    </a>
+        <!-- DATA ENCODED GRAPHICS PROTOTYPING -->
+        <a href="apparel.html" class="project-card bg-white p-5 rounded-xl">
+          <img src="./images/dogs hoodie.jpg" alt="Rift Apparel Prototype" class="rounded-md mb-4 object-cover h-56 w-full">
+          <h3 class="text-xl font-bold text-[#9b5de5]">DATA ENCODED GRAPHICS PROTOTYPING: RIFT APPAREL</h3>
+          <p class="text-sm mt-2">End-to-end development of scannable fashion pieces with encoded patterns and interactive elements.</p>
+          <div class="mt-4">
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">FASHION-TECH</span>
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">PRODUCT DESIGN</span>
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">ENCODED GRAPHICS</span>
+          </div>
+          <p class="text-xs mt-2 text-gray-700">Technical: Adobe Photoshop, Garment Printing, Mobile Scanning SDK</p>
+        </a>
 
-    <!-- RIFT APPAREL -->
-    <a href="apparel.html" class="bg-white border border-gray-200 p-5 rounded-xl shadow-md hover:shadow-lg transition-all">
-      <img src="./images/integration1.jpg" alt="Rift Apparel Prototype" class="rounded-md mb-4 object-cover h-56 w-full">
-      <h3 class="text-xl font-bold text-[#9b5de5]">Rift Apparel Prototype</h3>
-      <p class="text-sm mt-2">Full-cycle scannable fashion prototype integrating encoding into garment design.</p>
-      <p class="text-xs mt-2 text-gray-700">Skills: Apparel UX, Print Layout, Brand Strategy</p>
-      <p class="text-xs text-gray-500 italic">Role: Product Developer & Marketing Strategist</p>
-    </a>
+        <!-- INTEGRATING ENCODED PATTERNS -->
+        <a href="brandintegration.html" class="project-card bg-white p-5 rounded-xl">
+          <img src="./images/final.isaias.png" alt="Brand Integration Example" class="rounded-md mb-4 object-cover h-56 w-full">
+          <h3 class="text-xl font-bold text-[#9b5de5]">INTEGRATING ENCODED PATTERNS WITH GRAPHIC ASSETS</h3>
+          <p class="text-sm mt-2">Pioneered techniques for merging SVG branding with encoded graphics without compromising scannability.</p>
+          <div class="mt-4">
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">BRAND INTEGRATION</span>
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">SVG OPTIMIZATION</span>
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">UX TESTING</span>
+          </div>
+          <p class="text-xs mt-2 text-gray-700">Technical: Blend Modes, Opacity Masking, Contrast Analysis</p>
+        </a>
 
-    <!-- TERENCE PROJECT -->
-    <a href="terence.html" class="bg-white border border-gray-200 p-5 rounded-xl shadow-md hover:shadow-lg transition-all">
-      <img src="./images/1002.png" alt="Terence Project Preview" class="rounded-md mb-4 object-cover h-56 w-full">
-      <h3 class="text-xl font-bold text-[#9b5de5]">Terence Collaboration</h3>
-      <p class="text-sm mt-2">Collaborative work on encoded design systems and generative art pipelines.</p>
-      <p class="text-xs mt-2 text-gray-700">Skills: Creative Coding, Visual Prototyping, Art Direction</p>
-      <p class="text-xs text-gray-500 italic">Role: Interaction Designer & Technical Artist</p>
-    </a>
+        <!-- DATA ENCODED STICKERS -->
+        <a href="terence.html" class="project-card bg-white p-5 rounded-xl">
+          <img src="./images/1002.png" alt="Terence Sticker Project" class="rounded-md mb-4 object-cover h-56 w-full">
+          <h3 class="text-xl font-bold text-[#9b5de5]">DATA ENCODED STICKERS: TERENCE</h3>
+          <p class="text-sm mt-2">Collaborative sticker series featuring programmable designs with unique digital interactions.</p>
+          <div class="mt-4">
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">INTERACTIVE MEDIA</span>
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">PACKAGING DESIGN</span>
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">DYNAMIC CONTENT</span>
+          </div>
+          <p class="text-xs mt-2 text-gray-700">Technical: Vector Alignment, Cloud-Based Encoding, Prototype Testing</p>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
-
-
-    <!-- JS for Dropdown Toggle & Arrow Rotation -->
-    <script>
-      const spotToggle = document.getElementById('spotToggle');
-      const spotContent = document.getElementById('spotContent');
-      const arrowIcon = document.getElementById('arrowIcon');
-    
-      spotToggle.addEventListener('click', () => {
-        spotContent.classList.toggle('hidden');
-        arrowIcon.classList.toggle('rotate-180');
-      });
-    </script>
-    
-    
-   
-
-    
-<!-- Web Development Dropdown Section -->
-<section id="web-dev" class="relative py-16 px-6 md:px-12 bg-white text-black">
-  <!-- Purple Arrow Toggle -->
+<!-- Web Development -->
+<section id="web-dev" class="relative py-16 px-6 md:px-12">
   <button id="webToggle" class="absolute top-2 right-6 cursor-pointer">
     <svg id="webArrow" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
          fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -324,38 +292,93 @@
     </svg>
   </button>
 
-  <h2 class="text-4xl font-bold text-[#9b5de5]">Web Development</h2>
+  <h2 class="text-4xl font-bold text-[#9b5de5] mb-8">Web Development</h2>
 
-  <!-- Dropdown Content -->
-  <div id="webContent" class="hidden mt-8">
-    <p class="text-lg">
-      Highlight web projects with code snippets, animations, or parallax effects. 
-      This section showcases my front-end and back-end builds, creative website concepts, and interactive digital experiences.
+  <div id="webContent" class="hidden space-y-8">
+    <p class="text-lg max-w-3xl">
+      I build responsive, interactive websites using HTML, CSS, JavaScript, and Tailwind CSS, 
+      enhanced with Adobe Creative Suite for visual design. My focus is on clean code and memorable user experiences.
     </p>
 
-    <!-- Crab Snare Co. Project -->
-    <div class="mt-8 p-6 bg-[#f0f0f0] rounded-lg shadow-lg">
-      <h3 class="text-2xl font-semibold text-[#9b5de5] mb-4">Crab Snare Co.</h3>
-      <p class="mb-4">A full e-commerce website built from scratch for a crab snaring business. Features animated sliders, a dynamic shopping cart, and responsive design.</p>
-      <a href="https://your-crab-snare-url.com" target="_blank" class="text-[#9b5de5] underline">View Site</a>
-    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Jiggles Portfolio -->
+      <div class="border-2 border-[#9b5de5] rounded-lg p-4 hover:shadow-lg transition-shadow">
+        <h3 class="text-2xl font-bold text-[#9b5de5] mb-2">Jiggles Portfolio</h3>
+        <p class="mb-4">Interactive artist portfolio with animated elements and media integration.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Adobe XD</span>
+          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Tailwind</span>
+          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">JavaScript</span>
+        </div>
+        <a href="https://jiggles-portfolio.com" target="_blank" class="text-[#9b5de5] hover:underline">View Project →</a>
+      </div>
 
-    <!-- Sublair Social Platform -->
-    <div class="mt-8 p-6 bg-[#f0f0f0] rounded-lg shadow-lg">
-      <h3 class="text-2xl font-semibold text-[#9b5de5] mb-4">Sublair Social Platform</h3>
-      <p class="mb-4">A conceptual social platform designed for underground artists. Features responsive layouts, profile interactions, and creative community focus.</p>
-      <a href="https://your-sublair-url.com" target="_blank" class="text-[#9b5de5] underline">View Prototype</a>
-    </div>
+      <!-- Obsidian Rage Tour -->
+      <div class="border-2 border-[#9b5de5] rounded-lg p-4 hover:shadow-lg transition-shadow">
+        <h3 class="text-2xl font-bold text-[#9b5de5] mb-2">Obsidian Rage Tour</h3>
+        <p class="mb-4">Interactive tour page with animated dates and ticket links.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Adobe PS</span>
+          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">CSS3</span>
+          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">HTML5</span>
+        </div>
+        <a href="https://obsidianrage-tour.com" target="_blank" class="text-[#9b5de5] hover:underline">View Project →</a>
+      </div>
 
-    <!-- Obsidian Rage Band Tour Page -->
-    <div class="mt-8 p-6 bg-[#f0f0f0] rounded-lg shadow-lg">
-      <h3 class="text-2xl font-semibold text-[#9b5de5] mb-4">Obsidian Rage Band Tour Page</h3>
-      <p class="mb-4">A parallax-style landing page with pixelated red border animations, AI-generated band visuals, and responsive design for desktop and mobile.</p>
-      <a href="https://your-obsidian-rage-url.com" target="_blank" class="text-[#9b5de5] underline">View Project</a>
-    </div>
+      <!-- Dark Velvet EPK -->
+      <div class="border-2 border-[#9b5de5] rounded-lg p-4 hover:shadow-lg transition-shadow">
+        <h3 class="text-2xl font-bold text-[#9b5de5] mb-2">Dark Velvet EPK</h3>
+        <p class="mb-4">Electronic press kit with embedded media players and responsive layout.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Adobe AI</span>
+          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Tailwind</span>
+          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">JavaScript</span>
+        </div>
+        <a href="https://darkvelvet-epk.com" target="_blank" class="text-[#9b5de5] hover:underline">View Project →</a>
+      </div>
 
+      <!-- Encrypted Birthday Invitation -->
+      <div class="border-2 border-[#9b5de5] rounded-lg p-4 hover:shadow-lg transition-shadow">
+        <h3 class="text-2xl font-bold text-[#9b5de5] mb-2">Encrypted Birthday Invitation</h3>
+        <p class="mb-4">Interactive puzzle invitation with password-protected sections.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Adobe PS</span>
+          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">JavaScript</span>
+          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">CSS3</span>
+        </div>
+        <a href="https://secret-birthday.com" target="_blank" class="text-[#9b5de5] hover:underline">View Project →</a>
+      </div>
+
+      <!-- Heavy Haul eCommerce -->
+      <div class="border-2 border-[#9b5de5] rounded-lg p-4 hover:shadow-lg transition-shadow">
+        <h3 class="text-2xl font-bold text-[#9b5de5] mb-2">Heavy Haul eCommerce</h3>
+        <p class="mb-4">Industrial equipment marketplace with cart functionality.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Adobe XD</span>
+          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">JavaScript</span>
+          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Tailwind</span>
+        </div>
+        <a href="https://heavy-haul-demo.com" target="_blank" class="text-[#9b5de5] hover:underline">View Project →</a>
+      </div>
+
+      <!-- Crab Snare Co. -->
+      <div class="border-2 border-[#9b5de5] rounded-lg p-4 hover:shadow-lg transition-shadow">
+        <h3 class="text-2xl font-bold text-[#9b5de5] mb-2">Crab Snare Co.</h3>
+        <p class="mb-4">E-commerce site for crab fishing equipment.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Adobe PS</span>
+          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">HTML/CSS</span>
+          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">JavaScript</span>
+        </div>
+        <a href="https://crabsnare.com" target="_blank" class="text-[#9b5de5] hover:underline">View Project →</a>
+      </div>
+    </div>
   </div>
 </section>
+
+
+
+
 
 
 
@@ -446,77 +469,8 @@
         </div>
       </div>
     </section>
-
-  </div> <!-- END OF visualMainContent -->
+  </div>
 </section>
-
-<!-- JAVASCRIPT FOR TOGGLES -->
-<script>
-  // Main Visual Dropdown
-  const visualMainToggle = document.getElementById('visualMainToggle');
-  const visualMainContent = document.getElementById('visualMainContent');
-  const visualMainArrow = document.getElementById('visualMainArrow');
-
-  visualMainToggle.addEventListener('click', () => {
-    visualMainContent.classList.toggle('hidden');
-    visualMainArrow.classList.toggle('rotate-180');
-  });
-
-  // Subsection Toggles
-  const toggles = [
-    { toggleId: 'vstToggle', contentId: 'vstContent', arrowId: 'vstArrow' },
-    { toggleId: 'graphicToggle', contentId: 'graphicContent', arrowId: 'graphicArrow' },
-    { toggleId: 'visualToggle', contentId: 'visualContent', arrowId: 'visualArrow' }
-  ];
-
-  toggles.forEach(({ toggleId, contentId, arrowId }) => {
-    const toggle = document.getElementById(toggleId);
-    const content = document.getElementById(contentId);
-    const arrow = document.getElementById(arrowId);
-
-    toggle.addEventListener('click', () => {
-      content.classList.toggle('hidden');
-      arrow.classList.toggle('rotate-180');
-    });
-  });
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- JOURNALISM DROPDOWN -->
 <section id="journalism" class="relative py-16 px-6 md:px-12 bg-white text-black">
@@ -587,56 +541,107 @@
   </div>
 </section>
 
-<!-- COMBINED JAVASCRIPT FOR DROPDOWNS -->
+<!-- Contact -->
+<section id="contact" class="py-16 px-6 md:px-12">
+  <h2 class="text-4xl font-bold text-[#9b5de5] mb-8">Contact Me</h2>
+  <p class="text-lg mb-4">Let's create something together! Reach me at 
+    <a href="mailto:emilycinder96@yahoo.com" class="text-[#9b5de5] hover:underline">emilycinder96@yahoo.com</a>
+  </p>
+</section>
+
+<!-- Footer -->
+<footer class="py-8 text-center bg-white dark:bg-[#1a1a1a]">
+  <div class="flex justify-center space-x-6 mb-4">
+    <a href="#" class="text-[#9b5de5] hover:text-[#7e3fd8]">
+      <i class="fab fa-github text-2xl"></i>
+    </a>
+    <a href="#" class="text-[#9b5de5] hover:text-[#7e3fd8]">
+      <i class="fab fa-linkedin text-2xl"></i>
+    </a>
+    <a href="#" class="text-[#9b5de5] hover:text-[#7e3fd8]">
+      <i class="fab fa-instagram text-2xl"></i>
+    </a>
+  </div>
+  <p>&copy; 2025 Emily Cinder. All rights reserved.</p>
+</footer>
+
+<!-- JS for Menu Toggle and Dark Mode -->
 <script>
-  // Visual Programming Dropdown
-  const visualToggle = document.getElementById('visualToggle');
-  const visualContent = document.getElementById('visualContent');
-  const visualArrow = document.getElementById('visualArrow');
-  visualToggle.addEventListener('click', () => {
-    visualContent.classList.toggle('hidden');
-    visualArrow.classList.toggle('rotate-180');
+  // Menu toggle
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const modeToggle = document.getElementById('mode-toggle');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
   });
 
-  // Journalism Dropdown
-  const journalismToggle = document.getElementById('journalismToggle');
-  const journalismContent = document.getElementById('journalismContent');
-  const journalismArrow = document.getElementById('journalismArrow');
-  journalismToggle.addEventListener('click', () => {
-    journalismContent.classList.toggle('hidden');
-    journalismArrow.classList.toggle('rotate-180');
+  // Dark mode toggle
+  modeToggle.addEventListener('change', () => {
+    document.body.classList.toggle('night-mode');
+    localStorage.setItem('mode', modeToggle.checked ? 'night' : 'day');
+  });
+
+  // Set initial mode
+  if (localStorage.getItem('mode') === 'night') {
+    document.body.classList.add('night-mode');
+    modeToggle.checked = true;
+  }
+
+  // Section dropdown toggles
+  const toggles = [
+    { button: 'spotToggle', content: 'spotContent', arrow: 'arrowIcon' },
+    { button: 'webToggle', content: 'webContent', arrow: 'webArrow' },
+    { button: 'visualMainToggle', content: 'visualMainContent', arrow: 'visualMainArrow' },
+    { button: 'vstToggle', content: 'vstContent', arrow: 'vstArrow' },
+    { button: 'graphicToggle', content: 'graphicContent', arrow: 'graphicArrow' },
+    { button: 'visualToggle', content: 'visualContent', arrow: 'visualArrow' },
+    { button: 'journalismToggle', content: 'journalismContent', arrow: 'journalismArrow' }
+  ];
+
+  toggles.forEach(toggle => {
+    const button = document.getElementById(toggle.button);
+    const content = document.getElementById(toggle.content);
+    const arrow = document.getElementById(toggle.arrow);
+
+    if (button && content && arrow) {
+      button.addEventListener('click', () => {
+        content.classList.toggle('hidden');
+        arrow.classList.toggle('rotate-180');
+      });
+    }
+  });
+
+  // Active nav link highlighting
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('nav a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 100) {
+        current = section.getAttribute('id');
+      }
+    });
+    
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').includes(current)) {
+        link.classList.add('active');
+      }
+    });
+  });
+
+  // Hide loading screen when page loads
+  window.addEventListener('load', () => {
+    const loading = document.getElementById('loading');
+    loading.style.opacity = '0';
+    setTimeout(() => {
+      loading.style.display = 'none';
+    }, 500);
   });
 </script>
 
-
-  <!-- Contact -->
-  <section id="contact" class="py-16 px-6 md:px-12">
-    <h2 class="text-4xl font-bold text-[#9b5de5] mb-8">Contact Me</h2>
-    <p class="text-lg mb-4">Let’s create something together! Reach me at 
-      <a href="mailto:emilycinder96@yahoo.com" class="text-[#9b5de5] hover:underline">youremail@example.com</a>
-    </p>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-8 text-center">
-    &copy; 2025 Emily Cinder. All rights reserved.
-  </footer>
-
-  <!-- Toggle Logic -->
-  <script>
-    const toggle = document.getElementById('mode-toggle');
-    window.onload = function () {
-      const isNight = localStorage.getItem('mode') === 'night';
-      toggle.checked = isNight;
-      if (isNight) document.body.classList.add('night-mode');
-    };
-    toggle.addEventListener('change', function () {
-      document.body.classList.toggle('night-mode', this.checked);
-      localStorage.setItem('mode', this.checked ? 'night' : 'day');
-    });
-  </script>
-
 </body>
-
 </html>
-

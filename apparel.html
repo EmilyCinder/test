@@ -5,88 +5,209 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rift Apparel – Problem Solving Through Encoded Fashion</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Inconsolata', monospace;
       background: linear-gradient(to bottom right, #f0f0f0, #dad2e9);
       color: #111;
+      line-height: 1.6;
     }
     h1, h2, h3 {
+      font-weight: 600;
       color: #9b5de5;
     }
     .section {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 2rem 1rem;
     }
     .glass {
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(10px);
-      border-radius: 1rem;
-      padding: 2rem;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .gallery-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .gallery-row-large {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    @media (max-width: 768px) {
+      .gallery-row, .gallery-row-large {
+        grid-template-columns: 1fr;
+      }
+    }
+    .gallery-img {
+      width: 100%;
+      height: 220px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .gallery-img-large {
+      height: 280px;
+    }
+    .gallery-img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+    }
+    .gallery-img img {
+      max-width: 90%;
+      max-height: 90%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+    .objective-item {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    .objective-item:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      width: 1rem;
+      height: 1rem;
+      background-color: #9b5de5;
+      border-radius: 50%;
+    }
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(155, 93, 229, 0.3), transparent);
+      margin: 2rem 0;
+    }
+    .bg-purple-50 {
+      background-color: rgba(245, 243, 255, 0.8);
+    }
+    .border-purple-100 {
+      border-color: rgba(214, 188, 250, 0.5);
+    }
+    .text-purple-800 {
+      color: #5b21b6;
     }
   </style>
 </head>
 <body>
   <section class="section">
     <div class="glass">
-      <h1 class="text-5xl font-bold mb-6">Rift Apparel: Solving Problems with Encoded Fashion</h1>
-      <p class="mb-6 text-lg">Rift Apparel tackles key challenges in fashion by embedding encoded, scannable graphics into garments. This transforms clothing into a digital bridge — combating counterfeiting, enabling interactivity, and enriching brand storytelling.</p>
+      <header class="mb-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">RIFT APPAREL</h1>
+        <p class="text-xl font-medium text-gray-600">PROBLEM SOLVING THROUGH ENCODED FASHION</p>
+      </header>
 
-      <h2 class="text-3xl font-semibold mb-2">The Problem</h2>
-      <p class="mb-6">The fashion industry lacks scalable ways to merge authentication, collectibility, and interactivity. Counterfeiting and impersonal brand interactions remain widespread. The challenge: can we design clothing that is secure, digital-integrated, and expressive?</p>
+      <div class="divider"></div>
 
-      <h2 class="text-3xl font-semibold mb-2">The Solution</h2>
-      <p class="mb-6">Rift is a prototype clothing line that embeds encoded graphics into wearable designs. Each item is scannable and linked to digital data, turning fashion into a collectible and interactive product. The project explored the entire pipeline: sourcing, pattern design, digital linkage, branding, and production.</p>
+      <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4">PROJECT OVERVIEW</h2>
+        <p class="mb-6 text-lg">RIFT APPAREL TACKLES KEY CHALLENGES IN FASHION BY EMBEDDING ENCODED, SCANNABLE GRAPHICS INTO GARMENTS. THIS TRANSFORMS CLOTHING INTO A DIGITAL BRIDGE — COMBATING COUNTERFEITING, ENABLING INTERACTIVITY, AND ENRICHING BRAND STORYTELLING.</p>
+        
+        <div class="bg-purple-50 p-6 rounded-xl border border-purple-100">
+          <h3 class="text-2xl font-semibold mb-3 text-purple-800">THE PROBLEM</h3>
+          <p class="mb-4">THE FASHION INDUSTRY LACKS SCALABLE WAYS TO MERGE AUTHENTICATION, COLLECTIBILITY, AND INTERACTIVITY. COUNTERFEITING AND IMPERSONAL BRAND INTERACTIONS REMAIN WIDESPREAD.</p>
+          <h3 class="text-2xl font-semibold mb-3 text-purple-800">THE SOLUTION</h3>
+          <p>RIFT IS A PROTOTYPE CLOTHING LINE THAT EMBEDS ENCODED GRAPHICS INTO WEARABLE DESIGNS, TURNING FASHION INTO A COLLECTIBLE AND INTERACTIVE PRODUCT WHILE MAINTAINING PRODUCTION FEASIBILITY.</p>
+        </div>
+      </section>
 
-      <h2 class="text-3xl font-semibold mb-2">Problem-Solving Approach</h2>
-      <ul class="list-disc ml-6 mb-6 space-y-2">
-        <li>Identified issues in fashion authentication and brand engagement.</li>
-        <li>Created fabric-safe encoded designs that could stretch and print cleanly.</li>
-        <li>Built a brand identity — Rift — representing tech disruption and digital evolution.</li>
-        <li>Developed scannable digital assets using Illustrator and Spot Vision’s platform.</li>
-        <li>Tested user interactions and documented performance insights.</li>
-      </ul>
+      <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4">PROBLEM-SOLVING APPROACH</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-2">DESIGN CHALLENGE</h3>
+            <p>CREATED FABRIC-SAFE ENCODED DESIGNS THAT COULD STRETCH AND PRINT CLEANLY WHILE MAINTAINING SCANNABILITY. DEVELOPED THE RIFT BRAND IDENTITY REPRESENTING TECH DISRUPTION AND DIGITAL EVOLUTION.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">TECHNICAL IMPLEMENTATION</h3>
+            <p>BUILT SCANNABLE DIGITAL ASSETS USING ILLUSTRATOR AND SPOT VISION'S PLATFORM, TESTING VARIOUS PRINTING METHODS TO ENSURE DURABILITY AND SCAN RELIABILITY ACROSS DIFFERENT GARMENT TYPES.</p>
+          </div>
+        </div>
+      </section>
 
-      <h2 class="text-3xl font-semibold mb-2">Prototype Development</h2>
-      <p class="mb-6">Blanks were sourced to determine compatibility with encoded printing. The design team adjusted patterns for hoods, sleeves, and other segments, ensuring clarity in scanning. Rift branding and digital tags were embedded into each piece, tracked by a secure system.</p>
-      <p class="mb-6">Mockups, photoshoots, and internal documentation supported scalability analysis and marketing strategy for potential launch phases.</p>
+      <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4">KEY FEATURES</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="objective-item">EMBEDDED ENCODED GRAPHICS FOR AUTHENTICATION</div>
+          <div class="objective-item">DIGITAL INTERACTIVITY THROUGH SCANNABLE ELEMENTS</div>
+          <div class="objective-item">PRODUCTION-READY DESIGNS FOR SCALABILITY</div>
+          <div class="objective-item">BRAND IDENTITY SUPPORTING TECH-FASHION FUSION</div>
+        </div>
+      </section>
 
-      <h2 class="text-3xl font-semibold mb-2">Outcomes</h2>
-      <p class="mb-6">The Rift Apparel prototype proved that encoded, interactive fashion is possible using accessible tools and strong branding. This system opens the door for future collections that are both functional and secure — turning fashion into an experience.</p>
+      <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4">PROTOTYPE DEVELOPMENT</h2>
+        <p class="mb-6">SOURCED BLANK GARMENTS TO DETERMINE COMPATIBILITY WITH ENCODED PRINTING. ADJUSTED PATTERNS FOR HOODS, SLEEVES, AND OTHER SEGMENTS TO ENSURE SCANNING CLARITY WHILE MAINTAINING WEARABILITY.</p>
+        <p>IMPLEMENTED RIFT BRANDING AND DIGITAL TAGS IN EACH PIECE, SUPPORTED BY MOCKUPS, PHOTOSHOOTS, AND DOCUMENTATION TO VALIDATE THE CONCEPT FOR POTENTIAL PRODUCTION SCALING.</p>
+      </section>
 
-      <h2 class="text-3xl font-semibold mb-2">Gallery</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
-        <div class="relative w-full aspect-[5/4] overflow-hidden rounded-lg shadow-lg bg-white flex items-center justify-center hover:scale-105 transition">
-          <img src="./images/4-_NZ60854.jpg" alt="Encoded Hoodie" class="w-full h-full object-contain">
+      <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4">PROCESS GALLERY</h2>
+        
+        <!-- First row of 3 images -->
+        <div class="gallery-row">
+          <div class="gallery-img">
+            <img src="./images/4-_NZ60854.jpg" alt="ENCODED HOODIE">
+          </div>
+          <div class="gallery-img">
+            <img src="./images/modal4.png" alt="TAG DETAIL">
+          </div>
+          <div class="gallery-img">
+            <img src="./images/NEWORRIFT.jpg" alt="FOLDED SHIRT">
+          </div>
         </div>
-        <div class="relative w-full aspect-[5/4] overflow-hidden rounded-lg shadow-lg bg-white flex items-center justify-center hover:scale-105 transition">
-          <img src="./images/modal4.png" alt="Tag Detail" class="w-full h-full object-contain">
+        
+        <!-- Second row of 3 images -->
+        <div class="gallery-row">
+          <div class="gallery-img">
+            <img src="./images/IMG_3690.jpeg" alt="RIFT BRANDING MOCK">
+          </div>
+          <div class="gallery-img">
+            <img src="./images/globeshood.jpg" alt="PATTERN LAYOUT">
+          </div>
+          <div class="gallery-img">
+            <img src="./images/VAR_01.jpg" alt="SCAN DEMO">
+          </div>
         </div>
-        <div class="relative w-full aspect-[5/4] overflow-hidden rounded-lg shadow-lg bg-white flex items-center justify-center hover:scale-105 transition">
-          <img src="./images/NEWORRIFT.jpg" alt="Folded Shirt" class="w-full h-full object-contain">
+        
+        <!-- Third row of 2 larger images -->
+        <div class="gallery-row-large">
+          <div class="gallery-img gallery-img-large">
+            <img src="./images/IMG_3699.jpeg" alt="FEATURE APPAREL IMAGE">
+          </div>
+          <div class="gallery-img gallery-img-large">
+            <img src="./images/decoder.jpg" alt="DECODER DETAIL">
+          </div>
         </div>
-        <div class="relative w-full aspect-[5/4] overflow-hidden rounded-lg shadow-lg bg-white flex items-center justify-center hover:scale-105 transition">
-          <img src="./images/IMG_3690.jpeg" alt="Rift Branding Mock" class="w-full h-full object-contain">
-        </div>
-        <div class="relative w-full aspect-[5/4] overflow-hidden rounded-lg shadow-lg bg-white flex items-center justify-center hover:scale-105 transition">
-          <img src="./images/globeshood.jpg" alt="Pattern Layout" class="w-full h-full object-contain">
-        </div>
-        <div class="relative w-full aspect-[5/4] overflow-hidden rounded-lg shadow-lg bg-white flex items-center justify-center hover:scale-105 transition">
-          <img src="./images/VAR_01.jpg" alt="Scan Demo" class="w-full h-full object-contain">
-        </div>
-      </div>
+      </section>
 
-      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
-          <img src="./images/IMG_3699.jpeg" alt="Feature Apparel Image 1" class="w-full h-full object-cover">
-        </div>
-        <div class="rounded-lg overflow-hidden shadow-lg hover:scale-105 transform transition duration-300">
-          <img src="./images/decoder.jpg" alt="Feature Apparel Image 2" class="w-full h-full object-cover">
-        </div>
-      </div>
+      <section>
+        <h2 class="text-3xl font-semibold mb-4">OUTCOMES</h2>
+        <p class="mb-6">THE RIFT APPAREL PROTOTYPE SUCCESSFULLY DEMONSTRATED THAT ENCODED, INTERACTIVE FASHION IS ACHIEVABLE USING EXISTING PRODUCTION METHODS WHILE SOLVING KEY INDUSTRY PROBLEMS:</p>
+        <ul class="list-disc ml-6 mb-6 space-y-2">
+          <li>VERIFIED AUTHENTICATION THROUGH EMBEDDED CODES</li>
+          <li>ENHANCED CUSTOMER ENGAGEMENT VIA SCANNABLE CONTENT</li>
+          <li>MAINTAINED WEARABILITY AND PRODUCTION FEASIBILITY</li>
+          <li>ESTABLISHED A REPLICABLE FRAMEWORK FOR FUTURE COLLECTIONS</li>
+        </ul>
+        <p>THIS PROJECT PROVES THAT FASHION CAN EFFECTIVELY BRIDGE PHYSICAL AND DIGITAL EXPERIENCES WITHOUT COMPROMISING ON DESIGN OR SCALABILITY.</p>
+      </section>
     </div>
   </section>
 </body>
