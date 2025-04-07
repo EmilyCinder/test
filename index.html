@@ -380,7 +380,7 @@
   <h2 class="text-4xl font-bold text-[#9b5de5]">Visual</h2>
 
   <!-- COLLAPSIBLE CONTENT CONTAINER -->
-  <div id="visualMainContent" class="hidden pt-32 space-y-50">
+  <div id="visualMainContent" class="hidden pt-32 space-y-32">
 
     <!-- VST UI/UX DESIGN SUBSECTION -->
     <section id="vst-uiux" class="relative">
@@ -404,25 +404,62 @@
       </div>
     </section>
 
-    <!-- GRAPHIC DESIGN SUBSECTION -->
-    <section id="graphic-design" class="relative">
-      <button id="graphicToggle" class="absolute top-2 right-6 cursor-pointer">
-        <svg id="graphicArrow" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
-             fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-      <h3 class="text-4xl font-bold text-[#9b5de5]">Graphic Design</h3>
-      <div id="graphicContent" class="hidden mt-8">
-        <p class="text-lg">
-          Include your best design work, posters, digital illustrations, branding, and print projects.
-        </p>
-        <div class="mt-8 p-6 bg-[#f0f0f0] rounded-lg shadow-lg">
-          <h4 class="text-2xl font-semibold text-[#9b5de5] mb-4">Sample Poster Design</h4>
-          <p>A graphic project description or image preview could go here.</p>
-        </div>
-      </div>
-    </section>
+<!-- GRAPHIC DESIGN SUBSECTION -->
+<section id="graphic-design" class="relative">
+  <button id="graphicToggle" class="absolute top-2 right-6 cursor-pointer z-10">
+    <svg id="graphicArrow" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
+         fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M19 9l-7 7-7-7"/>
+    </svg>
+  </button>
+
+  <h3 class="text-4xl font-bold text-[#9b5de5]">Graphic Design</h3>
+
+  <div id="graphicContent" class="hidden mt-12">
+    <!-- Masonry Grid -->
+    <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+      
+      <!-- Image 1 -->
+      <img src="./images/font.jpg" class="rounded-lg shadow-lg w-full" alt="Design 1">
+      
+      <!-- Image 2 -->
+      <img src="./images/emily_cinder_bsf_poster.jpg" class="rounded-lg shadow-lg w-full" alt="Design 2">
+      
+      <!-- Image 3 -->
+      <img src="./images/fishie project.jpg" class="rounded-lg shadow-lg w-full" alt="Design 3">
+      
+      <!-- Image 4 -->
+      <img src="./images/Saturation+20.png" class="rounded-lg shadow-lg w-full" alt="Design 4">
+      
+      <!-- Image 5 -->
+      <img src="./images/Untitled-2.png" class="rounded-lg shadow-lg w-full" alt="Design 5">
+      
+      <!-- Image 6 -->
+      <img src="./images/VAR_03 (2).png" class="rounded-lg shadow-lg w-full" alt="Design 6">
+      
+      <!-- Image 7 -->
+      <img src="./images/Artboard 1.png" class="rounded-lg shadow-lg w-full" alt="Design 7">
+      
+      <!-- Image 8 -->
+      <img src="./images/coraline2.jpg" class="rounded-lg shadow-lg w-full" alt="Design 8">
+      
+      <!-- Image 9 -->
+      <img src="./images/1744046509521-2d4376cd-ffa0-42bb-99ac-de24c1e7674a_1.jpg" class="rounded-lg shadow-lg w-full" alt="Design 9">
+      
+      <!-- Image 10 -->
+      <img src="./images/flames_stencil.png" class="rounded-lg shadow-lg w-full" alt="Design 10">
+      
+      <!-- Image 11 -->
+      <img src="./images/7A024183-60A1-4023-AE11-2E9CC671E273.jpeg" class="rounded-lg shadow-lg w-full" alt="Design 11">
+      
+      <!-- Image 12 -->
+      <img src="./images/butterfly.png" class="rounded-lg shadow-lg w-full" alt="Design 12">
+
+    </div>
+  </div>
+</section>
+
 
     <!-- VISUAL PROGRAMMING SUBSECTION -->
     <section id="visual-programming" class="relative">
