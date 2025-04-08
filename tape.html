@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programmable Tape – Encoded Graphics on Packaging</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inconsolata', monospace;
+      background: linear-gradient(to bottom right, #f0f0f0, #e7dbf9);
+      color: #111;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      font-weight: 600;
+      color: #9b5de5;
+    }
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .gallery-row-large {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    @media (max-width: 768px) {
+      .gallery-row-large {
+        grid-template-columns: 1fr;
+      }
+    }
+    .gallery-img {
+      width: 100%;
+      height: 280px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .gallery-img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+    }
+    .gallery-img img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+    .objective-item {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    .objective-item:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      width: 1rem;
+      height: 1rem;
+      background-color: #9b5de5;
+      border-radius: 50%;
+    }
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(155, 93, 229, 0.3), transparent);
+      margin: 2rem 0;
+    }
+    .bg-purple-50 {
+      background-color: rgba(245, 243, 255, 0.8);
+    }
+    .border-purple-100 {
+      border-color: rgba(214, 188, 250, 0.5);
+    }
+    .text-purple-800 {
+      color: #5b21b6;
+    }
+  </style>
+</head>
+<body>
+  <section class="section">
+    <div class="glass">
+      <header class="mb-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">PROGRAMMABLE PACKAGING TAPE</h1>
+        <p class="text-xl font-medium text-gray-600">ENCODED GRAPHICS APPLIED TO SHIPPING MATERIALS</p>
+      </header>
+
+      <div class="divider"></div>
+
+      <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4">PROJECT OVERVIEW</h2>
+        <p class="mb-6 text-lg">THIS EXPERIMENT TESTED HOW ENCODED GRAPHICS COULD BE PRINTED ONTO PACKAGING TAPE AND REMAIN FUNCTIONAL WHEN WRAPPED AROUND SHIPPING BOXES. THE GOAL WAS TO CREATE A BRANDABLE, SCANNABLE SURFACE THAT COULD BE USED IN LOGISTICS OR RETAIL ENVIRONMENTS.</p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4">DESIGN STRATEGY</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-2">FORMAT & REPETITION</h3>
+            <p>THE ENCODED DESIGN WAS CONVERTED INTO A SEAMLESS REPEATING STRIP THAT COULD PRINT CONTINUOUSLY ONTO PACKING TAPE. THE PATTERN WAS CREATED TO ALIGN EVEN WHEN FOLDED OR STRETCHED SLIGHTLY.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">PROTOTYPING METHOD</h3>
+            <p>THE PATTERN WAS PRINTED ONTO STICKER PAPER, THEN APPLIED TO A STANDARD SHIPPING BOX TO MIMIC COMMERCIAL PACKAGING TAPE. THIS ALLOWED FOR FAST ITERATION AND SCAN TESTING.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4">OBJECTIVES</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="objective-item">CREATE A FUNCTIONAL, SCANNABLE TAPE PATTERN</div>
+          <div class="objective-item">ENSURE VISUAL ALIGNMENT EVEN WHEN WRAPPED</div>
+          <div class="objective-item">REINFORCE BRANDING THROUGH UTILITARIAN MATERIALS</div>
+          <div class="objective-item">EXPLORE SCAN ABILITY ON CURVED / TEXTURED SURFACES</div>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-3xl font-semibold mb-4">GALLERY</h2>
+        <div class="gallery-row-large">
+          <div class="gallery-img">
+            <img src="./images/tapebro.jpeg" alt="Tape Box Mockup">
+          </div>
+          
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-3xl font-semibold mb-4">CONCLUSION</h2>
+        <p class="mb-6">THIS MINI EXPERIMENT DEMONSTRATED THAT ENCODED GRAPHICS CAN BE ADAPTED FOR UTILITARIAN SURFACES LIKE PACKAGING TAPE. WHILE FURTHER MATERIAL TESTING IS NEEDED FOR PRODUCTION-LEVEL INTEGRATION, THIS PROTOTYPE PROVIDES A FOUNDATION FOR SMART LABELS AND INTERACTIVE SHIPPING DESIGN.</p>
+        <ul class="list-disc ml-6 mb-6 space-y-2">
+          <li>SHOWED ENCODED PATTERN CAN RETAIN FUNCTION ON FLEXIBLE MATERIALS</li>
+          <li>VALIDATED SEAMLESS DESIGN APPROACH FOR ROLLED APPLICATION</li>
+          <li>ENABLED DISCUSSION ON LOW-COST SMART PACKAGING IN RETAIL</li>
+        </ul>
+      </section>
+    </div>
+  </section>
+</body>
+</html>
