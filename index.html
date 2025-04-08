@@ -145,14 +145,14 @@
 <!-- About -->
 <section id="about" class="py-16 px-6 md:px-12">
   <h2 class="text-4xl font-bold text-[#9b5de5] mb-8">About Me</h2>
-  <p class="text-lg max-w-3xl">Hi, I’m Emily—an experimental web developer and interactive artist. I craft immersive digital experiences using modern code (HTML/CSS, JavaScript, Three.js) and Adobe Creative Suite for visual storytelling, while pushing boundaries with sensory installations in TouchDesigner and Ableton</p>
+  <p class="text-lg max-w-3xl">Hi, I'm Emily—an experimental web developer and interactive artist. I craft immersive digital experiences using modern code (HTML/CSS, JavaScript, Three.js) and Adobe Creative Suite for visual storytelling, while pushing boundaries with sensory installations in TouchDesigner and Ableton</p>
 </section>
 
 <!-- Spot Vision -->
 <section id="spot-vision" class="relative mt-20 py-20 px-6 md:px-12 bg-white text-black">
   <!-- Purple Arrow Toggle Positioned Higher -->
   <button id="spotToggle" class="absolute top-2 right-6 cursor-pointer">
-    <svg id="arrowIcon" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300 rotate-180"
+    <svg id="arrowIcon" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
          fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
     </svg>
@@ -161,8 +161,8 @@
   <h2 class="text-4xl font-bold text-[#9b5de5]">Recent Work: Spot Vision LLC</h2>
   <h3 class="text-xl font-medium text-[#9b5de5] mb-8">Product Marketing Manager & Prototype Developer</h3>
 
-  <!-- Collapsible Content - REMOVED THE EXTRA CLOSING DIV TAG THAT WAS HERE -->
-  <div id="spotContent" class="space-y-12 hidden">
+  <!-- Collapsible Content -->
+  <div id="spotContent" class="space-y-12">
     <!-- Bio & Image -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
       <div class="flex flex-col h-full text-lg space-y-6 leading-relaxed self-start mt-10">
@@ -218,68 +218,76 @@
     <div class="w-full max-w-5xl mx-auto">
       <h3 class="text-2xl font-semibold mb-4 text-[#9b5de5]">Social Media Management Showcase</h3>
       <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-      <iframe src="https://cdn.lightwidget.com/widgets/7305b938064a52acab6d32d9328beecb.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+     <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/7305b938064a52acab6d32d9328beecb.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
     </div>
 
-    <!-- EXPERIMENTS ARCHIVE SECTION -->
-    <div id="experiments" class="w-full">
-      <h2 class="text-4xl font-bold text-[#9b5de5] mb-8">TECHNICAL EXPERIMENTS ARCHIVE</h2>
-      <p class="text-lg max-w-4xl mb-8">A collection of experiments in encoded graphics, interactive media, and design systems. Each project combines technical innovation with creative execution.</p>
+  <!-- EXPERIMENTS ARCHIVE SECTION -->
+<div id="experiments" class="w-full">
+  <h2 class="text-4xl font-bold text-[#9b5de5] mb-8">TECHNICAL EXPERIMENTS ARCHIVE</h2>
+  <p class="text-lg max-w-4xl mb-8">A collection of experiments in encoded graphics, interactive media, and design systems. Each project combines technical innovation with creative execution.</p>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <!-- ENCAPSULATED ENCODED DATA -->
-        <a href="obsidian.html" class="project-card bg-white p-5 rounded-xl">
-          <img src="./images/APC_0042.jpg" alt="Encoded Crow Design" class="rounded-md mb-4 object-cover h-56 w-full">
-          <h3 class="text-xl font-bold text-[#9b5de5]">ENCAPSULATED ENCODED DATA</h3>
-          <p class="text-sm mt-2">Developed a symbolic crow motif with embedded scannable data for authentication and interactive applications.</p>
-          <div class="mt-4">
-            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">DATA ENCODING</span>
-            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">VECTOR DESIGN</span>
-            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">BRAND SYSTEMS</span>
-          </div>
-          <p class="text-xs mt-2 text-gray-700">Technical: Adobe Illustrator, Spot Vision SDK, Adobe Photoshop</p>
-        </a>
-
-        <!-- DATA ENCODED GRAPHICS PROTOTYPING -->
-        <a href="apparel.html" class="project-card bg-white p-5 rounded-xl">
-          <img src="./images/dogs hoodie.jpg" alt="Rift Apparel Prototype" class="rounded-md mb-4 object-cover h-56 w-full">
-          <h3 class="text-xl font-bold text-[#9b5de5]">DATA ENCODED GRAPHICS PROTOTYPING: RIFT APPAREL</h3>
-          <p class="text-sm mt-2">End-to-end development of scannable fashion pieces with encoded patterns and interactive elements.</p>
-          <div class="mt-4">
-            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">FASHION-TECH</span>
-            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">PRODUCT DESIGN</span>
-            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">ENCODED GRAPHICS</span>
-          </div>
-          <p class="text-xs mt-2 text-gray-700">Technical: Adobe Photoshop, Garment Printing, Mobile Scanning SDK</p>
-        </a>
-
-        <!-- INTEGRATING ENCODED PATTERNS -->
-        <a href="brandintegration.html" class="project-card bg-white p-5 rounded-xl">
-          <img src="./images/final.isaias.png" alt="Brand Integration Example" class="rounded-md mb-4 object-cover h-56 w-full">
-          <h3 class="text-xl font-bold text-[#9b5de5]">INTEGRATING ENCODED PATTERNS WITH GRAPHIC ASSETS</h3>
-          <p class="text-sm mt-2">Pioneered techniques for merging SVG branding with encoded graphics without compromising scannability.</p>
-          <div class="mt-4">
-            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">BRAND INTEGRATION</span>
-            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">SVG OPTIMIZATION</span>
-            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">UX TESTING</span>
-          </div>
-          <p class="text-xs mt-2 text-gray-700">Technical: Blend Modes, Opacity Masking, Contrast Analysis</p>
-        </a>
-
-        <!-- DATA ENCODED STICKERS -->
-        <a href="terence.html" class="project-card bg-white p-5 rounded-xl">
-          <img src="./images/1002.png" alt="Terence Sticker Project" class="rounded-md mb-4 object-cover h-56 w-full">
-          <h3 class="text-xl font-bold text-[#9b5de5]">DATA ENCODED STICKERS: TERENCE</h3>
-          <p class="text-sm mt-2">Collaborative sticker series featuring programmable designs with unique digital interactions.</p>
-          <div class="mt-4">
-            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">INTERACTIVE MEDIA</span>
-            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">PACKAGING DESIGN</span>
-            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">DYNAMIC CONTENT</span>
-          </div>
-          <p class="text-xs mt-2 text-gray-700">Technical: Vector Alignment, Cloud-Based Encoding, Prototype Testing</p>
-        </a>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <!-- ENCAPSULATED ENCODED DATA -->
+    <a href="obsidian.html" class="project-card bg-white p-5 rounded-xl relative">
+      <img src="./images/APC_0042.jpg" alt="Encoded Crow Design" class="rounded-md mb-4 object-cover h-56 w-full">
+      <h3 class="text-xl font-bold text-[#9b5de5]">ENCAPSULATED ENCODED DATA</h3>
+      <p class="text-sm mt-2">Developed a symbolic crow motif with embedded scannable data for authentication and interactive applications.</p>
+      <div class="mt-4">
+        <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">DATA ENCODING</span>
+        <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">VECTOR DESIGN</span>
+        <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">BRAND SYSTEMS</span>
       </div>
-    </div>
+      <p class="text-xs mt-2 text-gray-700">Technical: Adobe Illustrator, Spot Vision SDK, Adobe Photoshop</p>
+      <div class="absolute bottom-4 right-4 bg-[#9b5de5] text-white text-xs px-3 py-1 rounded-full">FULL PROJECT →</div>
+    </a>
+
+    <!-- DATA ENCODED GRAPHICS PROTOTYPING -->
+    <a href="apparel.html" class="project-card bg-white p-5 rounded-xl relative">
+      <img src="./images/dogs hoodie.jpg" alt="Rift Apparel Prototype" class="rounded-md mb-4 object-cover h-56 w-full">
+      <h3 class="text-xl font-bold text-[#9b5de5]">DATA ENCODED GRAPHICS PROTOTYPING: RIFT APPAREL</h3>
+      <p class="text-sm mt-2">End-to-end development of scannable fashion pieces with encoded patterns and interactive elements.</p>
+      <div class="mt-4">
+        <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">FASHION-TECH</span>
+        <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">PRODUCT DESIGN</span>
+        <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">ENCODED GRAPHICS</span>
+      </div>
+      <p class="text-xs mt-2 text-gray-700">Technical: Adobe Photoshop, Garment Printing.</p>
+      <div class="absolute bottom-4 right-4 bg-[#9b5de5] text-white text-xs px-3 py-1 rounded-full">FULL PROJECT →</div>
+    </a>
+
+    <!-- INTEGRATING ENCODED PATTERNS -->
+    <a href="brandintegration.html" class="project-card bg-white p-5 rounded-xl relative">
+      <img src="./images/final.isaias.png" alt="Brand Integration Example" class="rounded-md mb-4 object-cover h-56 w-full">
+      <h3 class="text-xl font-bold text-[#9b5de5]">INTEGRATING ENCODED PATTERNS WITH GRAPHIC ASSETS</h3>
+      <p class="text-sm mt-2">Pioneered techniques for merging SVG branding with encoded graphics without compromising scannability.</p>
+      <div class="mt-4">
+        <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">BRAND INTEGRATION</span>
+        <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">SVG OPTIMIZATION</span>
+        <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">UX TESTING</span>
+      </div>
+      <p class="text-xs mt-2 text-gray-700">Technical: Photoshop, Prototyping</p>
+      <div class="absolute bottom-4 right-4 bg-[#9b5de5] text-white text-xs px-3 py-1 rounded-full">FULL PROJECT →</div>
+    </a>
+
+    <!-- DATA ENCODED STICKERS -->
+    <a href="terence.html" class="project-card bg-white p-5 rounded-xl relative">
+      <img src="./images/1002.png" alt="Terence Sticker Project" class="rounded-md mb-4 object-cover h-56 w-full">
+      <h3 class="text-xl font-bold text-[#9b5de5]">DATA ENCODED STICKERS: TERENCE</h3>
+      <p class="text-sm mt-2">Collaborative sticker series featuring programmable designs with unique digital interactions.</p>
+      <div class="mt-4">
+        <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">INTERACTIVE MEDIA</span>
+        <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">PACKAGING DESIGN</span>
+        <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full mr-1 mb-1">DYNAMIC CONTENT</span>
+      </div>
+      <p class="text-xs mt-2 text-gray-700">Technical: Vector Alignment, Cloud-Based Encoding, Prototype Testing</p>
+      <div class="absolute bottom-4 right-4 bg-[#9b5de5] text-white text-xs px-3 py-1 rounded-full">FULL PROJECT →</div>
+    </a>
+  </div>
+</div>
+
+
+
+
   </div>
 </section>
 
@@ -294,7 +302,7 @@
 
   <h2 class="text-4xl font-bold text-[#9b5de5] mb-8">Web Development</h2>
 
-  <div id="webContent" class="hidden space-y-8">
+  <div id="webContent" class="space-y-8">
     <p class="text-lg max-w-3xl">
       I build responsive, interactive websites using HTML, CSS, JavaScript, and Tailwind CSS, 
       enhanced with Adobe Creative Suite for visual design. My focus is on optimized and memorable user experiences.
@@ -302,71 +310,102 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Jiggles Portfolio -->
-      <div class="border-2 border-[#9b5de5] rounded-lg p-4 hover:shadow-lg transition-shadow">
-        <h3 class="text-2xl font-bold text-[#9b5de5] mb-2">Jiggles Portfolio</h3>
-        <p class="mb-4">Interactive artist portfolio with animated elements and media integration.</p>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Adobe XD</span>
-          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Tailwind</span>
-          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">JavaScript</span>
+      <div class="border-2 border-[#9b5de5] rounded-lg overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+        <div class="h-48 bg-gray-100 flex items-center justify-center p-4">
+          <img src="./images/jiggle.PNG" alt="Jiggles Portfolio Screenshot" class="max-h-full max-w-full object-contain">
         </div>
-        <a href="https://emilycinder.github.io/Jiggles-Portfolio/" target="_blank" class="text-[#9b5de5] hover:underline">View Project →</a>
+        <div class="p-4 flex-grow">
+          <h3 class="text-2xl font-bold text-[#9b5de5] mb-2">Jiggles Portfolio</h3>
+          <p class="mb-4">Interactive artist portfolio with animated elements and media integration.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Adobe XD</span>
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Tailwind</span>
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">JavaScript</span>
+          </div>
+        </div>
+        <div class="px-4 pb-4">
+          <a href="https://emilycinder.github.io/Jiggles-Portfolio/" target="_blank" class="text-[#9b5de5] hover:underline">View Project →</a>
+        </div>
       </div>
 
       <!-- Obsidian Rage Tour -->
-      <div class="border-2 border-[#9b5de5] rounded-lg p-4 hover:shadow-lg transition-shadow">
-        <h3 class="text-2xl font-bold text-[#9b5de5] mb-2">Obsidian Rage Tour</h3>
-        <p class="mb-4">Interactive tour page with animated dates and ticket links.</p>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Adobe PS</span>
-          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">CSS3</span>
-          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">HTML5</span>
+      <div class="border-2 border-[#9b5de5] rounded-lg overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+        <div class="h-48 bg-gray-100 flex items-center justify-center p-4">
+          <img src="./images/or.PNG" alt="Obsidian Rage Tour Screenshot" class="max-h-full max-w-full object-contain">
         </div>
-        <a href="https://emilycinder.github.io/obsidainragedemo/" target="_blank" class="text-[#9b5de5] hover:underline">View Project →</a>
+        <div class="p-4 flex-grow">
+          <h3 class="text-2xl font-bold text-[#9b5de5] mb-2">Obsidian Rage Tour</h3>
+          <p class="mb-4">Interactive tour page with animated dates and ticket links.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Adobe PS</span>
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">CSS3</span>
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">HTML5</span>
+          </div>
+        </div>
+        <div class="px-4 pb-4">
+          <a href="https://emilycinder.github.io/obsidainragedemo/" target="_blank" class="text-[#9b5de5] hover:underline">View Project →</a>
+        </div>
       </div>
 
       <!-- Dark Velvet EPK -->
-      <div class="border-2 border-[#9b5de5] rounded-lg p-4 hover:shadow-lg transition-shadow">
-        <h3 class="text-2xl font-bold text-[#9b5de5] mb-2">Dark Velvet EPK</h3>
-        <p class="mb-4">Electronic press kit with embedded media players and responsive layout.</p>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Adobe AI</span>
-          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Tailwind</span>
-          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">JavaScript</span>
+      <div class="border-2 border-[#9b5de5] rounded-lg overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+        <div class="h-48 bg-gray-100 flex items-center justify-center p-4">
+          <img src="./images/dark-velvet.jpg" alt="Dark Velvet EPK Screenshot" class="max-h-full max-w-full object-contain">
         </div>
-        <a href="https://darkvelvet-epk.com" target="_blank" class="text-[#9b5de5] hover:underline">View Project →</a>
+        <div class="p-4 flex-grow">
+          <h3 class="text-2xl font-bold text-[#9b5de5] mb-2">Dark Velvet EPK</h3>
+          <p class="mb-4">Electronic press kit with embedded media players and responsive layout.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Adobe AI</span>
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Tailwind</span>
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">JavaScript</span>
+          </div>
+        </div>
+        <div class="px-4 pb-4">
+          <a href="https://darkvelvet-epk.com" target="_blank" class="text-[#9b5de5] hover:underline">View Project →</a>
+        </div>
       </div>
 
       <!-- Encrypted Birthday Invitation -->
-      <div class="border-2 border-[#9b5de5] rounded-lg p-4 hover:shadow-lg transition-shadow">
-        <h3 class="text-2xl font-bold text-[#9b5de5] mb-2">Encrypted Birthday Invitation</h3>
-        <p class="mb-4">Interactive puzzle invitation with password-protected sections.</p>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Adobe PS</span>
-          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">JavaScript</span>
-          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">CSS3</span>
+      <div class="border-2 border-[#9b5de5] rounded-lg overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+        <div class="h-48 bg-gray-100 flex items-center justify-center p-4">
+          <img src="./images/bd.PNG" alt="Encrypted Birthday Invitation Screenshot" class="max-h-full max-w-full object-contain">
         </div>
-        <a href="https://emilycinder.github.io/30thinvitation/" target="_blank" class="text-[#9b5de5] hover:underline">View Project →</a>
+        <div class="p-4 flex-grow">
+          <h3 class="text-2xl font-bold text-[#9b5de5] mb-2">Encrypted Birthday Invitation</h3>
+          <p class="mb-4">Interactive puzzle invitation with password-protected sections.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Adobe PS</span>
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">JavaScript</span>
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">CSS3</span>
+          </div>
+        </div>
+        <div class="px-4 pb-4">
+          <a href="https://emilycinder.github.io/30thinvitation/" target="_blank" class="text-[#9b5de5] hover:underline">View Project →</a>
+        </div>
       </div>
 
       <!-- Heavy Haul eCommerce -->
-      <div class="border-2 border-[#9b5de5] rounded-lg p-4 hover:shadow-lg transition-shadow">
-        <h3 class="text-2xl font-bold text-[#9b5de5] mb-2">Heavy Haul eCommerce</h3>
-        <p class="mb-4">Industrial equipment marketplace with cart functionality.</p>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Adobe XD</span>
-          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">JavaScript</span>
-          <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Tailwind</span>
+      <div class="border-2 border-[#9b5de5] rounded-lg overflow-hidden hover:shadow-lg transition-shadow flex flex-col">
+        <div class="h-48 bg-gray-100 flex items-center justify-center p-4">
+          <img src="./images/hhaul.PNG" alt="Heavy Haul eCommerce Screenshot" class="max-h-full max-w-full object-contain">
         </div>
-        <a href="https://emilycinder.github.io/HEAVY-HAUL/" target="_blank" class="text-[#9b5de5] hover:underline">View Project →</a>
+        <div class="p-4 flex-grow">
+          <h3 class="text-2xl font-bold text-[#9b5de5] mb-2">Heavy Haul eCommerce</h3>
+          <p class="mb-4">Industrial equipment marketplace with cart functionality.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Adobe XD</span>
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">JavaScript</span>
+            <span class="inline-block bg-purple-100 text-[#9b5de5] text-xs px-2 py-1 rounded-full">Tailwind</span>
+          </div>
+        </div>
+        <div class="px-4 pb-4">
+          <a href="https://emilycinder.github.io/HEAVY-HAUL/" target="_blank" class="text-[#9b5de5] hover:underline">View Project →</a>
+        </div>
       </div>
-
     </div>
   </div>
 </section>
-
-
-
 <!-- VISUAL SECTION WRAPPER WITH DROPDOWNS -->
 <section id="visual" class="relative py-16 px-6 md:px-12 bg-white text-black">
   <!-- Main Visual Dropdown Toggle -->
@@ -380,8 +419,7 @@
   <h2 class="text-4xl font-bold text-[#9b5de5]">Visual</h2>
 
   <!-- COLLAPSIBLE CONTENT CONTAINER -->
-  <div id="visualMainContent" class="hidden pt-32 space-y-32">
-
+  <div id="visualMainContent" class="pt-32 space-y-32">
     <!-- VST UI/UX DESIGN SUBSECTION -->
     <section id="vst-uiux" class="relative">
       <button id="vstToggle" class="absolute top-2 right-6 cursor-pointer">
@@ -391,7 +429,7 @@
         </svg>
       </button>
       <h3 class="text-4xl font-bold text-[#9b5de5]">VST UI/UX Design</h3>
-      <div id="vstContent" class="hidden space-y-12 mt-8">
+      <div id="vstContent" class="space-y-12 mt-8">
         <p class="text-lg max-w-3xl">
           A showcase of VST plugin interfaces designed with usability, workflow, and aesthetic in mind.
         </p>
@@ -404,87 +442,83 @@
       </div>
     </section>
 
-<!-- GRAPHIC DESIGN SUBSECTION -->
-<section id="graphic-design" class="relative">
-  <button id="graphicToggle" class="absolute top-2 right-6 cursor-pointer">
-    <svg id="graphicArrow" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
-         fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M19 9l-7 7-7-7"/>
-    </svg>
-  </button>
+    <!-- GRAPHIC DESIGN SUBSECTION -->
+    <section id="graphic-design" class="relative">
+      <button id="graphicToggle" class="absolute top-2 right-6 cursor-pointer">
+        <svg id="graphicArrow" class="w-10 h-10 text-[#9b5de5] transform transition-transform duration-300"
+             fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
 
-  <h3 class="text-4xl font-bold text-[#9b5de5]">Graphic Design</h3>
+      <h3 class="text-4xl font-bold text-[#9b5de5]">Graphic Design</h3>
 
-  <div id="graphicContent" class="hidden mt-12">
-    <!-- Graphic Design Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div id="graphicContent" class="mt-12">
+        <!-- Graphic Design Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Card 1 -->
+          <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
+            <img src="./images/font.jpg" class="w-full h-auto object-contain" alt="Design 1">
+          </div>
 
-      <!-- Card 1 -->
-      <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
-        <img src="./images/font.jpg" class="w-full h-auto object-contain" alt="Design 1">
-      </div>
+          <!-- Card 2 -->
+          <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
+            <img src="./images/emily_cinder_bsf_poster.jpg" class="w-full h-auto object-contain" alt="Design 2">
+          </div>
 
-      <!-- Card 2 -->
-      <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
-        <img src="./images/emily_cinder_bsf_poster.jpg" class="w-full h-auto object-contain" alt="Design 2">
-      </div>
+          <!-- Card 3 -->
+          <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
+            <img src="./images/fishie project.jpg" class="w-full h-auto object-contain" alt="Design 3">
+          </div>
 
-      <!-- Card 3 -->
-      <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
-        <img src="./images/fishie project.jpg" class="w-full h-auto object-contain" alt="Design 3">
-      </div>
+          <!-- Card 4 -->
+          <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
+            <img src="./images/Saturation+20.png" class="w-full h-auto object-contain" alt="Design 4">
+          </div>
 
-      <!-- Card 4 -->
-      <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
-        <img src="./images/Saturation+20.png" class="w-full h-auto object-contain" alt="Design 4">
-      </div>
+          <!-- Card 5 -->
+          <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
+            <img src="./images/Untitled-2.png" class="w-full h-auto object-contain" alt="Design 5">
+          </div>
 
-      <!-- Card 5 -->
-      <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
-        <img src="./images/Untitled-2.png" class="w-full h-auto object-contain" alt="Design 5">
-      </div>
+          <!-- Card 6 -->
+          <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
+            <img src="./images/VAR_03 (2).png" class="w-full h-auto object-contain" alt="Design 6">
+          </div>
 
-      <!-- Card 6 -->
-      <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
-        <img src="./images/VAR_03 (2).png" class="w-full h-auto object-contain" alt="Design 6">
-      </div>
+          <!-- Card 7 -->
+          <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
+            <img src="./images/Artboard 1.png" class="w-full h-auto object-contain" alt="Design 7">
+          </div>
 
-      <!-- Card 7 -->
-      <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
-        <img src="./images/Artboard 1.png" class="w-full h-auto object-contain" alt="Design 7">
-      </div>
+          <!-- Card 8 -->
+          <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
+            <img src="./images/coraline2.jpg" class="w-full h-auto object-contain" alt="Design 8">
+          </div>
 
-      <!-- Card 8 -->
-      <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
-        <img src="./images/coraline2.jpg" class="w-full h-auto object-contain" alt="Design 8">
-      </div>
+          <!-- Card 9 -->
+          <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
+            <img src="./images/1744046509521-2d4376cd-ffa0-42bb-99ac-de24c1e7674a_1.jpg" class="w-full h-auto object-contain" alt="Design 9">
+          </div>
 
-      <!-- Card 9 -->
-      <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
-        <img src="./images/1744046509521-2d4376cd-ffa0-42bb-99ac-de24c1e7674a_1.jpg" class="w-full h-auto object-contain" alt="Design 9">
-      </div>
+          <!-- Card 10 -->
+          <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
+            <img src="./images/flames_stencil.png" class="w-full h-auto object-contain" alt="Design 10">
+          </div>
 
-      <!-- Card 10 -->
-      <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
-        <img src="./images/flames_stencil.png" class="w-full h-auto object-contain" alt="Design 10">
-      </div>
+          <!-- Card 11 -->
+          <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
+            <img src="./images/7A024183-60A1-4023-AE11-2E9CC671E273.jpeg" class="w-full h-auto object-contain" alt="Design 11">
+          </div>
 
-      <!-- Card 11 -->
-      <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
-        <img src="./images/7A024183-60A1-4023-AE11-2E9CC671E273.jpeg" class="w-full h-auto object-contain" alt="Design 11">
-      </div>
-
-
-         <!-- Card 11 -->
-         <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
-          <img src="./images/butterfly.png" class="w-full h-auto object-contain" alt="Design 11">
+          <!-- Card 12 -->
+          <div class="bg-[#f0f0f0] shadow-lg rounded-lg overflow-hidden">
+            <img src="./images/butterfly.png" class="w-full h-auto object-contain" alt="Design 12">
+          </div>
         </div>
-  
-
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
 
     <!-- VISUAL PROGRAMMING SUBSECTION -->
     <section id="visual-programming" class="relative">
@@ -495,7 +529,7 @@
         </svg>
       </button>
       <h3 class="text-4xl font-bold text-[#9b5de5]">Visual Programming</h3>
-      <div id="visualContent" class="hidden mt-8 space-y-8">
+      <div id="visualContent" class="mt-8 space-y-8">
         <p class="text-lg max-w-3xl">
           Projects built in TouchDesigner exploring real-time generative visuals and interactive systems.
         </p>
@@ -518,19 +552,6 @@
   </div>
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- JOURNALISM DROPDOWN -->
 <section id="journalism" class="relative py-16 px-6 md:px-12 bg-white text-black">
   <!-- Purple Arrow Toggle -->
@@ -544,7 +565,7 @@
   <h2 class="text-4xl font-bold text-[#9b5de5]">Journalism</h2>
 
   <!-- Dropdown Content -->
-  <div id="journalismContent" class="hidden mt-8 space-y-8">
+  <div id="journalismContent" class="mt-8 space-y-8">
     <p class="text-lg max-w-3xl">
       Since August 2024, I have worked as a journalist and junior editor for <em>The Synapse</em> in partnership with Neuro Studio. 
       My column explores the evolving role of technology—particularly AI—in shaping the creative processes of music producers 
@@ -646,40 +667,69 @@
     document.body.classList.add('night-mode');
     modeToggle.checked = true;
   }
-// Section dropdown toggles
-const toggles = [
-  { 
-    button: 'spotToggle', 
-    content: 'spotContent', 
-    arrow: 'arrowIcon',
-    initiallyHidden: true  // Add this flag for Spot Vision
-  },
-  { button: 'webToggle', content: 'webContent', arrow: 'webArrow' },
-  { button: 'visualMainToggle', content: 'visualMainContent', arrow: 'visualMainArrow' },
-  { button: 'vstToggle', content: 'vstContent', arrow: 'vstArrow' },
-  { button: 'graphicToggle', content: 'graphicContent', arrow: 'graphicArrow' },
-  { button: 'visualToggle', content: 'visualContent', arrow: 'visualArrow' },
-  { button: 'journalismToggle', content: 'journalismContent', arrow: 'journalismArrow' }
-];
 
-toggles.forEach(toggle => {
-  const button = document.getElementById(toggle.button);
-  const content = document.getElementById(toggle.content);
-  const arrow = document.getElementById(toggle.arrow);
+  // Initialize all collapsible sections with toggle functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    // Define all toggleable sections with their corresponding elements
+    const collapsibleSections = [
+      { 
+        triggerId: 'spotToggle', 
+        contentId: 'spotContent', 
+        arrowId: 'arrowIcon' 
+      },
+      { 
+        triggerId: 'webToggle', 
+        contentId: 'webContent', 
+        arrowId: 'webArrow' 
+      },
+      { 
+        triggerId: 'visualMainToggle', 
+        contentId: 'visualMainContent', 
+        arrowId: 'visualMainArrow' 
+      },
+      { 
+        triggerId: 'vstToggle', 
+        contentId: 'vstContent', 
+        arrowId: 'vstArrow' 
+      },
+      { 
+        triggerId: 'graphicToggle', 
+        contentId: 'graphicContent', 
+        arrowId: 'graphicArrow' 
+      },
+      { 
+        triggerId: 'visualToggle', 
+        contentId: 'visualContent', 
+        arrowId: 'visualArrow' 
+      },
+      { 
+        triggerId: 'journalismToggle', 
+        contentId: 'journalismContent', 
+        arrowId: 'journalismArrow' 
+      }
+    ];
 
-  if (button && content && arrow) {
-    // Initialize state - hide Spot Vision content by default
-    if (toggle.initiallyHidden) {
-      content.classList.add('hidden');
-      arrow.classList.add('rotate-180');
-    }
-    
-    button.addEventListener('click', () => {
-      content.classList.toggle('hidden');
-      arrow.classList.toggle('rotate-180');
+    // Initialize each collapsible section
+    collapsibleSections.forEach(section => {
+      const trigger = document.getElementById(section.triggerId);
+      const content = document.getElementById(section.contentId);
+      const arrow = document.getElementById(section.arrowId);
+
+      // Only proceed if all elements exist
+      if (trigger && content && arrow) {
+        // Set initial state (content visible, arrow pointing down)
+        content.classList.remove('hidden');
+        arrow.classList.remove('rotate-180');
+
+        // Add click event to toggle visibility
+        trigger.addEventListener('click', () => {
+          content.classList.toggle('hidden');
+          arrow.classList.toggle('rotate-180');
+        });
+      }
     });
-  }
-});
+  });
+
   // Active nav link highlighting
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('nav a');
@@ -704,10 +754,12 @@ toggles.forEach(toggle => {
   // Hide loading screen when page loads
   window.addEventListener('load', () => {
     const loading = document.getElementById('loading');
-    loading.style.opacity = '0';
-    setTimeout(() => {
-      loading.style.display = 'none';
-    }, 500);
+    if (loading) {
+      loading.style.opacity = '0';
+      setTimeout(() => {
+        loading.style.display = 'none';
+      }, 500);
+    }
   });
 </script>
 
